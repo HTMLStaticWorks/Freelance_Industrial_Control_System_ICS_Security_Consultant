@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Register</title>
+  <meta name="description" content="Secure Client Registration.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="overflow: hidden;">
+  <div class="auth-wrapper">
+    <div class="auth-panel" style="max-width: 600px;">
+      <h1 class="auth-header">SECURE REGISTRATION</h1>
+      
+      <form id="registerForm" class="validate-form">
+        <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="fullName">Full Name</label>
+            <input type="text" id="fullName" class="form-control" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="organization">Organization</label>
+            <input type="text" id="organization" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Corporate Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        
+        <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" class="form-control" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$" title="Min 8 chars, 1 uppercase, 1 number">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control" required>
+            <span class="form-error">⚠ Passwords must match</span>
+          </div>
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: flex-start; gap: 12px; margin-top: 24px;">
+          <input type="checkbox" id="nda" required style="margin-top: 4px;">
+          <label for="nda" style="font-size: 0.9rem; color: var(--color-muted);">I accept the Terms & Conditions and Non-Disclosure Agreement (NDA). I understand that all shared assessment data is strictly confidential.</label>
+        </div>
+        
+        <button type="submit" class="btn btn-login" style="width: 100%; justify-content: center; margin: 24px 0; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">REGISTER</button>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+          <button type="button" class="btn" style="background: #fff; color: #757575; border: 1px solid #ccc; width: 100%;">
+            <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 16px; margin-right: 8px;"> Continue with Google
+          </button>
+          <button type="button" class="btn btn-outline" style="width: 100%;">
+            Continue with Email
+          </button>
+        </div>
+        
+        <div class="text-center mt-4" style="font-family: var(--font-display); font-size: 0.9rem;">
+          <a href="login.html" style="color: var(--color-muted);">Return to Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

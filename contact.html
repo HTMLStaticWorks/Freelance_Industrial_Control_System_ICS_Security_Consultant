@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Contact</title>
+  <meta name="description" content="Contact ThreatForge for ICS security consulting.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="desktop-toggles">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      </div>
+      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
+      <a href="login.html" class="btn-login">LOGIN</a>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="mobile-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+      <h1 class="section-title">Secure Communications</h1>
+      <p class="section-subtitle">Typical response: 24–48 hours. All inquiries treated as highly confidential.</p>
+      <!-- CALENDLY_WIDGET_EMBED_HERE -->
+    </section>
+
+    <section>
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; justify-content: center;">
+        
+        <div style="flex: 1 1 500px; background: var(--color-surface); padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--shadow-base);">
+          <form id="contactForm" class="validate-form" action="https://formspree.io/f/REPLACE_ID" method="POST">
+            <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="name">Name *</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="org">Organization *</label>
+                <input type="text" id="org" name="organization" class="form-control" required>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="email">Corporate Email *</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="industry">Industry *</label>
+                <select id="industry" name="industry" class="form-control" required>
+                  <option value="">Select...</option>
+                  <option value="energy">Energy</option>
+                  <option value="water">Water / Wastewater</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="pharma">Pharma</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="engagement">Engagement Type *</label>
+              <select id="engagement" name="engagement" class="form-control" required>
+                <option value="">Select...</option>
+                <option value="assessment">ICS Risk Assessment</option>
+                <option value="segmentation">OT Network Segmentation</option>
+                <option value="compliance">Compliance Audit</option>
+                <option value="incident">Incident Response Retainer</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 12px;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px;">
+          <div class="map-placeholder" aria-label="Location map" style="width: 100%; height: 250px; background-color: var(--color-surface); border: 1px solid var(--color-border); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.1;"></div>
+            <div style="font-family: var(--font-display); color: var(--color-muted); z-index: 1;">[ LOCATION: HOUSTON, TX ]</div>
+          </div>
+
+          <div style="background: var(--color-surface); padding: 24px; border-left: 3px solid var(--color-accent);">
+            <h3 class="mb-4" style="font-family: var(--font-display);">Encrypted Channel</h3>
+            <p style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 16px;">For sensitive communications involving vulnerability disclosures or active incident response, please encrypt using the public key below.</p>
+            <div style="background: #000; color: #0f0; padding: 16px; font-family: var(--font-display); font-size: 0.8rem; overflow-x: auto; border-radius: 2px;">
+              <!-- PGP_PUBLIC_KEY_BLOCK_HERE -->
+              -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+              mQINBGEy7... [KEY PLACEHOLDER]<br>
+              -----END PGP PUBLIC KEY BLOCK-----
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Footer content -->
+    <div class="footer-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+    <div class="footer-bottom">
+      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Blog</title>
+  <meta name="description" content="OT Cybersecurity Insights and Best Practices.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="desktop-toggles">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      </div>
+      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
+      <a href="login.html" class="btn-login">LOGIN</a>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+      <h1 class="section-title">OT Security Intelligence</h1>
+      <p class="section-subtitle">Insights, methodology, and technical deep-dives into protecting industrial environments.</p>
+    </section>
+
+    <section id="blog-posts">
+      <div class="blog-grid">
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-muted">Best Practices</span>
+          </div>
+          <h3 class="card-title">Why Flat OT Networks Are a Ticking Time Bomb</h3>
+          <p class="card-text mb-4">Examining the catastrophic risks of unsegmented Level 2 networks where a single compromised HMI provides direct access to all PLCs.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-muted">Compliance</span>
+          </div>
+          <h3 class="card-title">IEC 62443 vs NIST 800-82: Which Framework?</h3>
+          <p class="card-text mb-4">A comparative analysis of the leading ICS security frameworks and how to map their overlapping controls to streamline audits.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-danger">Threat Intel</span>
+          </div>
+          <h3 class="card-title">The Evolution of Ransomware Targeting ICS</h3>
+          <p class="card-text mb-4">How modern ransomware groups are specifically writing payloads to identify and halt industrial processes like Siemens WinCC and GE Proficy.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-muted">Industry News</span>
+          </div>
+          <h3 class="card-title">Impact of NIS2 on European Manufacturing</h3>
+          <p class="card-text mb-4">Understanding the mandatory incident reporting and executive liability provisions in the new EU directive affecting OT operators.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-muted">Best Practices</span>
+          </div>
+          <h3 class="card-title">Safe Active Scanning in Legacy Environments</h3>
+          <p class="card-text mb-4">Why traditional IT vulnerability scanners crash legacy PLCs, and how to perform safe asset discovery using OT-native protocols.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+
+        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
+          <div style="margin-bottom: 16px;">
+            <span class="badge badge-warning">Case Studies</span>
+          </div>
+          <h3 class="card-title">Post-Mortem: Remote Access Exploitation</h3>
+          <p class="card-text mb-4">Deconstructing a recent breach involving unauthorized vendor remote access tools bypassed the IDMZ entirely.</p>
+          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+        <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul><li><a href="blog.html">Blog</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul><li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

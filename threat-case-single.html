@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Threat Case Detail</title>
+  <meta name="description" content="Detailed analysis of an ICS threat case.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html" class="active">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="desktop-toggles">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      </div>
+      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
+      <a href="login.html" class="btn-login">LOGIN</a>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html" class="active">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
+  </aside>
+
+  <main style="padding-top: 80px; padding-bottom: 80px;">
+    <article style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
+      <div style="margin-bottom: 32px;">
+        <a href="threat-cases.html" style="color: var(--color-accent); font-family: var(--font-display);"><i class="ph ph-arrow-left"></i> Back to Threat Cases</a>
+      </div>
+      
+      <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span class="badge badge-danger">Energy</span>
+        <span class="badge badge-muted">Purdue Level 1</span>
+      </div>
+      
+      <h1 class="section-title text-left mb-4" style="text-align: left;">TRITON / TRISIS Safety System Compromise</h1>
+      
+      <div style="background: var(--color-surface); padding: 24px; border-left: 3px solid var(--color-danger); margin-bottom: 40px; font-family: var(--font-display);">
+        <strong>Incident Summary:</strong> Unprecedented malware designed to manipulate industrial safety systems, representing an escalation from IT disruption to physical kinetic threat.
+      </div>
+
+      <div style="line-height: 1.8;">
+        <h3 class="mb-4" style="color: var(--color-accent);">The Attack Vector</h3>
+        <p class="mb-4">Attackers gained an initial foothold on the IT network before moving laterally into the OT environment. They compromised an engineering workstation that was used to program the plant's Triconex Safety Instrumented Systems (SIS).</p>
+
+        <h3 class="mb-4" style="color: var(--color-accent);">Purdue Model Failure</h3>
+        <p class="mb-4">The core architectural failure was the lack of strict segmentation between Level 2 (Supervisory Control) and Level 1 (Basic Control/Safety). The SIS network should operate entirely autonomously from the primary DCS to prevent common-mode failures.</p>
+
+        <div style="background: #000; color: #0f0; padding: 16px; font-family: var(--font-display); border-radius: var(--border-radius); margin-bottom: 24px;">
+          > SCANNING TRICONEX SIS NODES...<br>
+          > VULNERABILITY DETECTED: UNRESTRICTED ENGINEERING ACCESS<br>
+          > PAYLOAD INJECTED TO FIRMWARE
+        </div>
+
+        <h3 class="mb-4" style="color: var(--color-accent);">The ThreatForge Remediation</h3>
+        <p class="mb-4">For our clients, mitigating this threat involves implementing hardware-enforced unidirectional gateways (data diodes) for SIS monitoring and enforcing physical key switches for any logic updates to Level 1 safety controllers.</p>
+      </div>
+
+      <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 40px; text-align: center;">
+        <h3 class="mb-4">Ensure your safety systems are truly isolated.</h3>
+        <a href="contact.html" class="btn btn-primary">Request Architecture Review</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+        <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="services.html">ICS Risk Assessment</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul><li><a href="threat-cases.html">Threat Cases</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul><li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

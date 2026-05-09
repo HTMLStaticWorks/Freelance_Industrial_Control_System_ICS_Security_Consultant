@@ -1,0 +1,38 @@
+html[dir="rtl"] .drawer {
+  right: auto;
+  left: -100%;
+  border-left: none;
+  border-right: 3px solid var(--color-accent);
+}
+
+html[dir="rtl"] .drawer.open {
+  transform: translateX(100%);
+}
+
+html[dir="rtl"] .card {
+  border-left: none;
+  border-right: 3px solid var(--color-accent);
+  clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px);
+}
+
+html[dir="rtl"] .btn {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-grid {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-col {
+  text-align: right;
+}
+
+html[dir="rtl"] .status-dot {
+  flex-direction: row-reverse;
+}
+
+/* RTL Specific padding and margins override will use logical properties in style.css */

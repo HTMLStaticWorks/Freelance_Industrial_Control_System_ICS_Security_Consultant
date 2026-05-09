@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Why Flat OT Networks Are a Ticking Time Bomb</title>
+  <meta name="description" content="Examining the catastrophic risks of unsegmented Level 2 networks.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="desktop-toggles">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      </div>
+      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
+      <a href="login.html" class="btn-login">LOGIN</a>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
+  </aside>
+
+  <main style="padding-top: 80px; padding-bottom: 80px;">
+    <article style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
+      <div style="margin-bottom: 32px;">
+        <a href="blog.html" style="color: var(--color-accent); font-family: var(--font-display);"><i class="ph ph-arrow-left"></i> Back to Blog</a>
+      </div>
+      
+      <div style="display: flex; gap: 16px; margin-bottom: 24px; align-items: center;">
+        <span class="badge badge-muted">Best Practices</span>
+        <span style="color: var(--color-muted); font-family: var(--font-display); font-size: 0.9rem;">5 MIN READ</span>
+      </div>
+      
+      <h1 class="section-title text-left mb-4" style="text-align: left;">Why Flat OT Networks Are a Ticking Time Bomb</h1>
+      <p style="color: var(--color-muted); margin-bottom: 40px;">Published: May 2025 | By: ThreatForge Consultant</p>
+
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80" alt="Network cables" style="width: 100%; height: auto; border: 1px solid var(--color-border); margin-bottom: 40px; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+
+      <div style="line-height: 1.8;">
+        <p class="mb-4">One of the most common architectural flaws we encounter during ICS Risk Assessments is the dreaded "flat" OT network. In these environments, every device from a Level 3 Historian down to a Level 1 PLC resides on the same subnet, fully routable and entirely unsegmented.</p>
+        
+        <h3 class="mb-4" style="color: var(--color-accent);">The Illusion of the Air Gap</h3>
+        <p class="mb-4">Many plant managers operate under the assumption that their network is "air-gapped" because it lacks a direct internet connection. However, the reality is that OT networks are heavily interconnected with IT systems for data collection, vendor remote support, and business analytics.</p>
+
+        <h3 class="mb-4" style="color: var(--color-accent);">Implementing Zones and Conduits</h3>
+        <p class="mb-4">The solution, prescribed by IEC 62443, is to implement a Zone and Conduit model. This involves grouping assets with similar security requirements into distinct zones and strictly controlling the communication conduits between them. Crucially, a demilitarized zone (IDMZ) must sit between the enterprise network (Level 4) and the manufacturing operations (Level 3).</p>
+      </div>
+
+      <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 40px;">
+        <h4 style="font-family: var(--font-display); margin-bottom: 16px;">Related Posts</h4>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#" style="color: var(--color-accent); text-decoration: underline;">IEC 62443 vs NIST 800-82: Which Framework?</a>
+          <a href="#" style="color: var(--color-accent); text-decoration: underline;">Safe Active Scanning in Legacy Environments</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

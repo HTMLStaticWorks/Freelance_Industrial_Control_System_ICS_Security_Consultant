@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Login</title>
+  <meta name="description" content="Secure Client Access Portal.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="overflow: hidden;">
+  <!-- Note: No navbar, no theme toggle, no back to home -->
+  <div class="auth-wrapper">
+    <!-- Animated scanline background managed in CSS via ::after on body in dark mode -->
+    <div class="auth-panel">
+      <h1 class="auth-header">SECURE CLIENT ACCESS</h1>
+      
+      <form id="loginForm" class="validate-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" required>
+          <span class="form-error">⚠ Invalid email format</span>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input type="password" id="password" class="form-control" required>
+          <span class="form-error">⚠ Password required</span>
+        </div>
+        
+        <button type="submit" class="btn btn-login" style="width: 100%; justify-content: center; margin-bottom: 24px; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">LOGIN</button>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+          <button type="button" class="btn" style="background: #fff; color: #757575; border: 1px solid #ccc; width: 100%;">
+            <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 16px; margin-right: 8px;"> Continue with Google
+          </button>
+          <button type="button" class="btn btn-outline" style="width: 100%;">
+            Continue with Email
+          </button>
+        </div>
+        
+        <div class="text-center mt-4" style="font-family: var(--font-display); font-size: 0.9rem;">
+          <span style="color: var(--color-muted);">No access token?</span> <a href="register.html" style="color: var(--color-accent);">Request Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

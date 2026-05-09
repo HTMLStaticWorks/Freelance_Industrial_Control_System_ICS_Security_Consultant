@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatForge | Home 2</title>
+  <meta name="description" content="ThreatForge alternate home page layout.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <!-- Navbar will be identical, omitting for brevity in thought, but must include in file -->
+  <header class="navbar">
+    <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html" class="active">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="desktop-toggles">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      </div>
+      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
+      <a href="login.html" class="btn-login">LOGIN</a>
+      <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+  <aside class="drawer">
+    <button class="drawer-close" aria-label="Close menu">✕</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html" class="active">Home 2</a>
+      <a href="services.html">Services</a>
+      <a href="threat-cases.html">Threat Cases</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="split-hero" style="display: flex; flex-wrap: wrap; min-height: 80vh; padding: 0;">
+      <!-- Image/Parallax Background -->
+      <div style="flex: 1 1 50%; background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-attachment: fixed; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+         <div style="background: rgba(0,0,0,0.7); padding: 40px; text-align: center; color: #fff;">
+            <h1 class="section-title">Industrial Cyber Defense</h1>
+            <p class="section-subtitle" style="color: #ccc;">Parallax Hero Integration</p>
+         </div>
+      </div>
+      <div style="flex: 1 1 50%; background-color: var(--color-surface); padding: 80px 5%; display: flex; flex-direction: column; justify-content: center;">
+        <h2 class="section-title text-left">Advanced Threat Mitigation</h2>
+        <p class="mb-4 text-left">Protecting Level 1 controls from nation-state actors and untargeted ransomware alike.</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="contact.html" class="btn btn-primary">Start Engagement</a>
+        </div>
+        <div class="live-ticker mt-4" style="background: #000; color: var(--color-accent); padding: 8px 16px; font-family: var(--font-display); overflow: hidden; white-space: nowrap;">
+          <marquee scrollamount="5">LIVE THREAT FEED: CVE-2024-12345 (Critical) Siemens S7-1500 firmware bypass -- CVE-2023-98765 (High) Rockwell Automation FactoryTalk escalation -- IEC 62443 compliance updates published.</marquee>
+        </div>
+      </div>
+    </section>
+
+    <section id="zigzag-features">
+      <div class="section-header">
+        <h2 class="section-title">Methodology</h2>
+      </div>
+      
+      <div class="zigzag-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
+        <div style="flex: 1 1 400px;">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Server infrastructure" style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+        </div>
+        <div style="flex: 1 1 400px;">
+          <h3 class="card-title">Assess</h3>
+          <p class="card-text mb-4">Deep packet inspection and active querying using safe protocols to identify PLCs, RTUs, and HMIs across the network without disrupting live processes.</p>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+      
+      <div class="zigzag-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
+        <div style="flex: 1 1 400px;">
+          <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?auto=format&fit=crop&w=800&q=80" alt="Control Room" style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+        </div>
+        <div style="flex: 1 1 400px;">
+          <h3 class="card-title">Segment</h3>
+          <p class="card-text mb-4">Implementation of robust zone and conduit models. Enforcing IDMZ boundaries to ensure IT compromises do not cascade into OT environments.</p>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
+        <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
+          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">ICS Risk Assessment</a></li>
+          <li><a href="services.html">OT Network Segmentation</a></li>
+          <li><a href="services.html">Patch Management</a></li>
+          <li><a href="services.html">Incident Response</a></li>
+          <li><a href="services.html">Compliance Auditing</a></li>
+          <li><a href="services.html">OT Pen Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="threat-cases.html">Threat Cases</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li>
+          <li><a href="#"><i class="ph ph-linkedin-logo"></i> LinkedIn</a></li>
+          <li>Global Operations | Houston, TX</li>
+          <li><small style="color: var(--color-muted);">For sensitive communications, request PGP key.</small></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
