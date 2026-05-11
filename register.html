@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThreatForge | Register</title>
   <meta name="description" content="Secure Client Registration.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -22,9 +23,11 @@
     </div>
 
     <div class="auth-panel" style="max-width: 600px;">
-      <a href="index.html" class="navbar-logo"
-        style="margin-bottom: 32px; display: block; text-align: center; text-decoration: none;">[ThreatForge]<span
-          class="cursor">_</span></a>
+      <div style="text-align: center; margin-bottom: 32px;">
+        <a href="index.html">
+          <img src="assets/images/threatforge-logo.svg" alt="ThreatForge" style="height: 48px; width: auto; display: inline-block;">
+        </a>
+      </div>
       <h1 class="auth-header">SECURE REGISTRATION</h1>
 
       <form id="registerForm" class="validate-form">
@@ -84,7 +87,7 @@
         </div>
 
         <div class="text-center mt-4" style="font-family: var(--font-display); font-size: 0.9rem;">
-          <a href="login.html" style="color: var(--color-muted);">Return to Login</a>
+          <a href="login.html" class="auth-link">Return to Login</a>
         </div>
       </form>
     </div>

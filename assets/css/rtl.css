@@ -35,4 +35,40 @@ html[dir="rtl"] .status-dot {
   flex-direction: row-reverse;
 }
 
-/* RTL Specific padding and margins override will use logical properties in style.css */
+/* Dashboard RTL */
+html[dir="rtl"] .dashboard-layout {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .sidebar {
+  border-right: none;
+  border-left: 1px solid var(--color-border);
+}
+
+html[dir="rtl"] .sidebar-link {
+  flex-direction: row-reverse;
+  border-left: none;
+  border-right: 3px solid transparent;
+}
+
+html[dir="rtl"] .sidebar-link.active {
+  border-right-color: var(--color-accent);
+}
+
+html[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media (max-width: 1023px) {
+  html[dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  html[dir="rtl"] .sidebar.open {
+    transform: translateX(0);
+  }
+}

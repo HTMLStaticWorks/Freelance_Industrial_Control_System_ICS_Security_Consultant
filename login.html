@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThreatForge | Login</title>
   <meta name="description" content="Secure Client Access Portal.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <!-- Note: No navbar, no theme toggle, no back to home -->
   <div class="auth-wrapper">
@@ -21,16 +24,21 @@
     </div>
 
     <div class="auth-panel">
-      <a href="index.html" class="navbar-logo" style="margin-bottom: 32px; display: block; text-align: center; text-decoration: none;">[ThreatForge]<span class="cursor">_</span></a>
-      <h1 class="auth-header">SECURE CLIENT ACCESS</h1>
-      
+      <div style="text-align: center; margin-bottom: 32px;">
+        <a href="index.html">
+          <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+            style="height: 48px; width: auto; display: inline-block;">
+        </a>
+      </div>
+      <h3 class="auth-header">SECURE CLIENT ACCESS</h3>
+
       <form id="loginForm" class="validate-form">
         <div class="form-group">
           <label class="form-label" for="email">Email Address</label>
           <input type="email" id="email" class="form-control" required>
           <span class="form-error">⚠ Invalid email format</span>
         </div>
-        
+
         <div class="form-group">
           <label class="form-label" for="password">Password</label>
           <div class="password-wrapper">
@@ -40,30 +48,37 @@
           <span class="form-error">⚠ Password required</span>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; font-size: 0.85rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; font-size: 0.85rem;">
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--color-muted);">
             <input type="checkbox" id="remember" style="accent-color: var(--color-accent);"> Remember me
           </label>
-          <a href="forgot-password.html" class="auth-link" style="font-family: var(--font-display);">FORGOT_PASSWORD?</a>
+          <a href="forgot-password.html" class="auth-link"
+            style="font-family: var(--font-display);">FORGOT_PASSWORD?</a>
         </div>
-        
-        <button type="submit" class="btn btn-login" style="width: 100%; justify-content: center; margin-bottom: 24px; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">LOGIN</button>
-        
-        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
-          <button type="button" class="btn" style="background: #fff; color: #000; border: 1px solid var(--color-border); width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+
+        <button type="submit" class="btn btn-login"
+          style="width: 100%; justify-content: center; margin-bottom: 24px; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">LOGIN</button>
+
+        <div
+          style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+          <button type="button" class="btn"
+            style="background: #fff; color: #000; border: 1px solid var(--color-border); width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
             <i class="ph ph-google-logo" style="font-size: 1.2rem;"></i> Continue with Google
           </button>
-          <button type="button" class="btn btn-outline" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <button type="button" class="btn btn-outline"
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
             <i class="ph ph-apple-logo" style="font-size: 1.2rem;"></i> Continue with Apple
           </button>
         </div>
-        
+
         <div class="text-center mt-4" style="font-family: var(--font-display); font-size: 0.9rem;">
-          <span style="color: var(--color-muted);">No access token?</span> <a href="register.html" style="color: var(--color-accent);">Request Account</a>
+          <span style="color: var(--color-muted);">No access token?</span> <a href="register.html" class="auth-link">Request Account</a>
         </div>
       </form>
     </div>
   </div>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

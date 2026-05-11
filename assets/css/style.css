@@ -108,8 +108,15 @@ section > .section-header {
   font-family: var(--font-display);
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid transparent;
   gap: 8px;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn-primary {
@@ -213,6 +220,14 @@ section > .section-header {
 }
 .btn-login::before { content: "[ "; color: var(--color-muted); }
 .btn-login::after { content: " ]"; color: var(--color-muted); }
+.btn-login:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.btn-login:hover::before,
+.btn-login:hover::after {
+  color: var(--color-accent);
+}
 
 .desktop-only {
   display: flex;

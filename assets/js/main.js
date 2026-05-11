@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.documentElement;
   
   const currentTheme = localStorage.getItem('threatforge-theme') || 
-    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light');
+    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
     
   if (currentTheme === 'dark') {
     body.setAttribute('data-theme', 'dark');

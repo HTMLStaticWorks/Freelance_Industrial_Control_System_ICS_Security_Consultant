@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThreatForge | Client Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body data-theme="dark">
+
+<body>
   <div class="dashboard-layout">
-    
+
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div style="color: var(--color-accent);">[ThreatForge]</div>
-        <div class="status-dot">● SECURE PORTAL</div>
+        <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+          style="height: 36px; width: auto; display: block;">
+
       </div>
       <nav class="sidebar-nav">
         <div class="sidebar-link active" data-target="vuln-assess">
@@ -43,29 +47,43 @@
       </nav>
     </aside>
 
-    <!-- Bottom Tab Bar for Mobile -->
-    <nav class="bottom-tab-bar">
-      <div class="tab-link active" data-target="vuln-assess"><i class="ph ph-shield-warning" style="font-size: 1.5rem;"></i><span>Vuln</span></div>
-      <div class="tab-link" data-target="patch-schedule"><i class="ph ph-calendar-check" style="font-size: 1.5rem;"></i><span>Patch</span></div>
-      <div class="tab-link" data-target="net-segment"><i class="ph ph-git-branch" style="font-size: 1.5rem;"></i><span>Segment</span></div>
-      <div class="tab-link" data-target="comp-reports"><i class="ph ph-download-simple" style="font-size: 1.5rem;"></i><span>Reports</span></div>
-      <div class="tab-link" data-target="logout"><i class="ph ph-sign-out" style="font-size: 1.5rem;"></i><span>Exit</span></div>
-    </nav>
+    <div class="sidebar-overlay"></div>
 
     <!-- Main Content -->
     <main class="dashboard-main">
-      
-      <!-- Top Widget (Risk Score) -->
-      <div class="top-widget">
-        <svg width="60" height="60" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-border)" stroke-width="8" />
-          <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-danger)" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="67.8" transform="rotate(-90 50 50)" />
-          <text x="50" y="55" text-anchor="middle" font-family="monospace" font-size="20" fill="var(--color-text)">73</text>
-        </svg>
-        <div>
-          <div style="font-family: var(--font-display); font-size: 0.9rem; color: var(--color-muted);">OT Risk Score</div>
-          <div style="color: var(--color-accent); font-size: 0.8rem; display: flex; align-items: center; gap: 4px;">
-            <i class="ph ph-arrow-down"></i> Improved from 81 last quarter
+      <div class="dashboard-header">
+        <button class="sidebar-toggle" aria-label="Toggle Menu">
+          <i class="ph ph-list"></i>
+        </button>
+        
+        <div class="header-actions">
+          <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+          <div class="user-profile">
+            <i class="ph ph-user-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome Banner -->
+      <div class="welcome-banner">
+        <div class="welcome-content">
+          <h1>Welcome back, Operator_01</h1>
+          <p>SYSTEM_STATUS: <span style="color: var(--color-accent);">MONITORING</span> | SESSION_ID: 8829-X</p>
+        </div>
+        <div class="welcome-stats">
+          <div class="stat-item">
+            <svg width="50" height="50" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-border)" stroke-width="10" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-danger)" stroke-width="10"
+                stroke-dasharray="251.2" stroke-dashoffset="67.8" transform="rotate(-90 50 50)" />
+              <text x="50" y="58" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="var(--color-text)">73</text>
+            </svg>
+            <div class="stat-label">OT RISK<br>SCORE</div>
+          </div>
+          <div class="stat-item">
+            <div style="font-size: 1.5rem; color: var(--color-accent);"><i class="ph ph-shield-check"></i></div>
+            <div class="stat-label">SYSTEM<br>SECURE</div>
           </div>
         </div>
       </div>
@@ -74,13 +92,15 @@
       <section id="vuln-assess" class="dashboard-section active">
         <h2 class="section-title">Vulnerability Assessment</h2>
         <div style="margin-top: 24px; display: flex; gap: 8px; flex-wrap: wrap;">
-          <button class="badge badge-muted" style="border:1px solid var(--color-border); background:transparent; cursor:pointer;">All</button>
+          <button class="badge badge-muted"
+            style="border:1px solid var(--color-border); background:transparent; cursor:pointer;">All</button>
           <button class="badge badge-danger" style="cursor:pointer;">Critical</button>
           <button class="badge badge-warning" style="cursor:pointer;">High</button>
-          <button class="badge badge-muted" style="border:1px solid var(--color-border); background:transparent; cursor:pointer;">Unpatched</button>
+          <button class="badge badge-muted"
+            style="border:1px solid var(--color-border); background:transparent; cursor:pointer;">Unpatched</button>
         </div>
-        
-        <div style="overflow-x: auto;">
+
+        <div class="table-container">
           <table class="data-table">
             <thead>
               <tr>
@@ -94,28 +114,68 @@
             </thead>
             <tbody>
               <tr>
-                <td>PLC_Mixer_A1</td><td>Level 1</td><td>CVE-2024-10023</td><td><span class="badge badge-danger">Critical</span></td><td>Open</td><td>2025-01-10</td>
+                <td>PLC_Mixer_A1</td>
+                <td>Level 1</td>
+                <td>CVE-2024-10023</td>
+                <td><span class="badge badge-danger">Critical</span></td>
+                <td>Open</td>
+                <td>2025-01-10</td>
               </tr>
               <tr>
-                <td>HMI_Station_04</td><td>Level 2</td><td>CVE-2023-45671</td><td><span class="badge badge-warning">High</span></td><td>In Remediation</td><td>2025-01-12</td>
+                <td>HMI_Station_04</td>
+                <td>Level 2</td>
+                <td>CVE-2023-45671</td>
+                <td><span class="badge badge-warning">High</span></td>
+                <td>In Remediation</td>
+                <td>2025-01-12</td>
               </tr>
               <tr>
-                <td>Historian_DB_01</td><td>Level 3</td><td>CVE-2024-00981</td><td><span class="badge badge-danger">Critical</span></td><td>Open</td><td>2025-01-15</td>
+                <td>Historian_DB_01</td>
+                <td>Level 3</td>
+                <td>CVE-2024-00981</td>
+                <td><span class="badge badge-danger">Critical</span></td>
+                <td>Open</td>
+                <td>2025-01-15</td>
               </tr>
               <tr>
-                <td>RTU_Pump_P2</td><td>Level 1</td><td>CVE-2022-30101</td><td><span class="badge badge-muted">Low</span></td><td>Patched</td><td>2025-01-01</td>
+                <td>RTU_Pump_P2</td>
+                <td>Level 1</td>
+                <td>CVE-2022-30101</td>
+                <td><span class="badge badge-muted">Low</span></td>
+                <td>Patched</td>
+                <td>2025-01-01</td>
               </tr>
               <tr>
-                <td>Eng_Workstation</td><td>Level 2</td><td>CVE-2024-55123</td><td><span class="badge badge-warning">High</span></td><td>Open</td><td>2025-01-20</td>
+                <td>Eng_Workstation</td>
+                <td>Level 2</td>
+                <td>CVE-2024-55123</td>
+                <td><span class="badge badge-warning">High</span></td>
+                <td>Open</td>
+                <td>2025-01-20</td>
               </tr>
               <tr>
-                <td>IDMZ_Proxy_01</td><td>Level 3.5</td><td>CVE-2023-11223</td><td><span class="badge badge-danger">Critical</span></td><td>In Remediation</td><td>2025-01-21</td>
+                <td>IDMZ_Proxy_01</td>
+                <td>Level 3.5</td>
+                <td>CVE-2023-11223</td>
+                <td><span class="badge badge-danger">Critical</span></td>
+                <td>In Remediation</td>
+                <td>2025-01-21</td>
               </tr>
               <tr>
-                <td>SCADA_Server_A</td><td>Level 2</td><td>CVE-2024-90011</td><td><span class="badge" style="background: rgba(245, 166, 35, 0.5); color: #fff;">Medium</span></td><td>Open</td><td>2025-01-18</td>
+                <td>SCADA_Server_A</td>
+                <td>Level 2</td>
+                <td>CVE-2024-90011</td>
+                <td><span class="badge" style="background: rgba(245, 166, 35, 0.5); color: #fff;">Medium</span></td>
+                <td>Open</td>
+                <td>2025-01-18</td>
               </tr>
               <tr>
-                <td>PLC_Conveyor_B</td><td>Level 1</td><td>CVE-2023-77654</td><td><span class="badge badge-danger">Critical</span></td><td>Open</td><td>2025-01-22</td>
+                <td>PLC_Conveyor_B</td>
+                <td>Level 1</td>
+                <td>CVE-2023-77654</td>
+                <td><span class="badge badge-danger">Critical</span></td>
+                <td>Open</td>
+                <td>2025-01-22</td>
               </tr>
             </tbody>
           </table>
@@ -182,45 +242,90 @@
       <!-- Section: Network Segmentation -->
       <section id="net-segment" class="dashboard-section">
         <h2 class="section-title">Network Segmentation</h2>
-        <div style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--border-radius); text-align: center;">
-          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+        
+        <div class="kpi-grid" style="margin-top: 24px;">
+          <div class="kpi-card">
+            <div class="kpi-label">Isolated Zones</div>
+            <div class="kpi-value">92%</div>
+            <div class="kpi-trend trend-up"><i class="ph ph-trend-up"></i> +4% vs last audit</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Cross-Zone Traffic</div>
+            <div class="kpi-value">12</div>
+            <div class="kpi-trend trend-down"><i class="ph ph-trend-down"></i> -2 active sessions</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Active ACL Rules</div>
+            <div class="kpi-value">1,452</div>
+            <div class="kpi-trend"><i class="ph ph-check-circle"></i> Validated</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">IDMZ Health</div>
+            <div class="kpi-value">Normal</div>
+            <div class="kpi-trend trend-up"><i class="ph ph-pulse"></i> 99.9% Uptime</div>
+          </div>
+        </div>
+        <div
+          style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--border-radius); text-align: center;">
+          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="max-width: 100%; height: auto;">
             <!-- Level 4 -->
-            <rect x="50" y="20" width="500" height="50" fill="rgba(74, 96, 112, 0.2)" stroke="var(--color-muted)" stroke-width="2"/>
-            <text x="300" y="50" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 4: ENTERPRISE (Risk: Low)</text>
+            <rect x="50" y="20" width="500" height="50" fill="rgba(74, 96, 112, 0.2)" stroke="var(--color-muted)"
+              stroke-width="2" />
+            <text x="300" y="50" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 4:
+              ENTERPRISE (Risk: Low)</text>
             <title>120 Assets | Last Audit: 2025-01-05</title>
-            
-            <line x1="300" y1="70" x2="300" y2="100" stroke="var(--color-muted)" stroke-width="2" stroke-dasharray="4 4"/>
-            
+
+            <line x1="300" y1="70" x2="300" y2="100" stroke="var(--color-muted)" stroke-width="2"
+              stroke-dasharray="4 4" />
+
             <!-- Level 3.5 -->
-            <rect x="100" y="100" width="400" height="50" fill="rgba(0, 204, 122, 0.2)" stroke="var(--color-accent)" stroke-width="2"/>
-            <text x="300" y="130" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 3.5: IDMZ (Risk: Low)</text>
+            <rect x="100" y="100" width="400" height="50" fill="rgba(0, 204, 122, 0.2)" stroke="var(--color-accent)"
+              stroke-width="2" />
+            <text x="300" y="130" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 3.5: IDMZ
+              (Risk: Low)</text>
             <title>8 Assets | Last Audit: 2025-01-20</title>
-            
-            <line x1="300" y1="150" x2="300" y2="180" stroke="var(--color-muted)" stroke-width="2" stroke-dasharray="4 4"/>
-            
+
+            <line x1="300" y1="150" x2="300" y2="180" stroke="var(--color-muted)" stroke-width="2"
+              stroke-dasharray="4 4" />
+
             <!-- Level 3 -->
-            <rect x="100" y="180" width="400" height="50" fill="rgba(245, 166, 35, 0.2)" stroke="var(--color-warning)" stroke-width="2"/>
-            <text x="300" y="210" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 3: SITE OPS (Risk: Medium)</text>
+            <rect x="100" y="180" width="400" height="50" fill="rgba(245, 166, 35, 0.2)" stroke="var(--color-warning)"
+              stroke-width="2" />
+            <text x="300" y="210" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 3: SITE
+              OPS (Risk: Medium)</text>
             <title>15 Assets | Last Audit: 2025-01-20</title>
 
-            <line x1="300" y1="230" x2="300" y2="260" stroke="var(--color-muted)" stroke-width="2" stroke-dasharray="4 4"/>
-            
+            <line x1="300" y1="230" x2="300" y2="260" stroke="var(--color-muted)" stroke-width="2"
+              stroke-dasharray="4 4" />
+
             <!-- Level 2 -->
-            <rect x="100" y="260" width="400" height="50" fill="rgba(224, 48, 48, 0.2)" stroke="var(--color-danger)" stroke-width="2"/>
-            <text x="300" y="290" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 2: SUPERVISORY (Risk: High)</text>
+            <rect x="100" y="260" width="400" height="50" fill="rgba(224, 48, 48, 0.2)" stroke="var(--color-danger)"
+              stroke-width="2" />
+            <text x="300" y="290" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 2:
+              SUPERVISORY (Risk: High)</text>
             <title>24 Assets | Last Audit: 2025-01-20</title>
 
-            <line x1="300" y1="310" x2="300" y2="340" stroke="var(--color-muted)" stroke-width="2" stroke-dasharray="4 4"/>
-            
+            <line x1="300" y1="310" x2="300" y2="340" stroke="var(--color-muted)" stroke-width="2"
+              stroke-dasharray="4 4" />
+
             <!-- Level 1/0 -->
-            <rect x="100" y="340" width="400" height="50" fill="rgba(224, 48, 48, 0.2)" stroke="var(--color-danger)" stroke-width="2"/>
-            <text x="300" y="370" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 1/0: CONTROL & FIELD (Risk: High)</text>
+            <rect x="100" y="340" width="400" height="50" fill="rgba(224, 48, 48, 0.2)" stroke="var(--color-danger)"
+              stroke-width="2" />
+            <text x="300" y="370" fill="var(--color-text)" text-anchor="middle" font-family="monospace">LEVEL 1/0:
+              CONTROL & FIELD (Risk: High)</text>
             <title>85 Assets | Last Audit: 2025-01-20</title>
           </svg>
           <div style="margin-top: 24px; display: flex; justify-content: center; gap: 16px; font-size: 0.8rem;">
-            <div><span style="display:inline-block; width:12px; height:12px; background:var(--color-accent); margin-right:4px;"></span> Low Risk</div>
-            <div><span style="display:inline-block; width:12px; height:12px; background:var(--color-warning); margin-right:4px;"></span> Medium Risk</div>
-            <div><span style="display:inline-block; width:12px; height:12px; background:var(--color-danger); margin-right:4px;"></span> High Risk</div>
+            <div><span
+                style="display:inline-block; width:12px; height:12px; background:var(--color-accent); margin-right:4px;"></span>
+              Low Risk</div>
+            <div><span
+                style="display:inline-block; width:12px; height:12px; background:var(--color-warning); margin-right:4px;"></span>
+              Medium Risk</div>
+            <div><span
+                style="display:inline-block; width:12px; height:12px; background:var(--color-danger); margin-right:4px;"></span>
+              High Risk</div>
           </div>
         </div>
       </section>
@@ -236,9 +341,10 @@
               <strong>Date:</strong> 2025-01-15<br>
               <strong>Status:</strong> <span style="color: var(--color-accent);">Final</span>
             </div>
-            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF ]<!-- REPLACE WITH REAL PDF URL --></a>
+            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF
+              ]<!-- REPLACE WITH REAL PDF URL --></a>
           </div>
-          
+
           <div class="card">
             <h3 class="card-title" style="font-size: 1.1rem;">Annual Review</h3>
             <div style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 16px;">
@@ -246,9 +352,10 @@
               <strong>Date:</strong> 2024-12-01<br>
               <strong>Status:</strong> <span style="color: var(--color-accent);">Final</span>
             </div>
-            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF ]<!-- REPLACE WITH REAL PDF URL --></a>
+            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF
+              ]<!-- REPLACE WITH REAL PDF URL --></a>
           </div>
-          
+
           <div class="card">
             <h3 class="card-title" style="font-size: 1.1rem;">EU Operations Audit</h3>
             <div style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 16px;">
@@ -256,9 +363,10 @@
               <strong>Date:</strong> 2025-02-01<br>
               <strong>Status:</strong> <span style="color: var(--color-warning);">Draft</span>
             </div>
-            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF ]<!-- REPLACE WITH REAL PDF URL --></a>
+            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF
+              ]<!-- REPLACE WITH REAL PDF URL --></a>
           </div>
-          
+
           <div class="card">
             <h3 class="card-title" style="font-size: 1.1rem;">Grid Interconnect Audit</h3>
             <div style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 16px;">
@@ -266,14 +374,17 @@
               <strong>Date:</strong> 2024-10-15<br>
               <strong>Status:</strong> <span style="color: var(--color-accent);">Final</span>
             </div>
-            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF ]<!-- REPLACE WITH REAL PDF URL --></a>
+            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">[ ↓ Download PDF
+              ]<!-- REPLACE WITH REAL PDF URL --></a>
           </div>
         </div>
       </section>
 
     </main>
   </div>
-  
+
+  <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>
