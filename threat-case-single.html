@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo" style="display: flex; align-items: center;">
-      <img src="assets/images/threatforge-logo.svg" alt="ThreatForge" style="height: 36px; width: auto; display: block;">
+      <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+        style="height: 36px; width: auto; display: block;">
     </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -58,35 +61,45 @@
   <main style="padding-top: 80px; padding-bottom: 80px;">
     <article style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
       <div style="margin-bottom: 32px;">
-        <a href="threat-cases.html" style="color: var(--color-accent); font-family: var(--font-display);"><i class="ph ph-arrow-left"></i> Back to Threat Cases</a>
+        <a href="threat-cases.html" style="color: var(--color-accent); font-family: var(--font-display);"><i
+            class="ph ph-arrow-left"></i> Back to Threat Cases</a>
       </div>
-      
+
       <div style="display: flex; gap: 16px; margin-bottom: 24px;">
         <span class="badge badge-accent">Energy</span>
         <span class="badge badge-accent">Purdue Level 1</span>
       </div>
-      
+
       <h1 class="section-title text-left mb-4" style="text-align: left;">TRITON / TRISIS Safety System Compromise</h1>
-      
-      <div style="background: var(--color-surface); padding: 24px; border-left: 3px solid var(--color-danger); margin-bottom: 40px; font-family: var(--font-display);">
-        <strong>Incident Summary:</strong> Unprecedented malware designed to manipulate industrial safety systems, representing an escalation from IT disruption to physical kinetic threat.
+
+      <div
+        style="background: var(--color-surface); padding: 24px; border-left: 3px solid var(--color-danger); margin-bottom: 40px; font-family: var(--font-display);">
+        <strong>Incident Summary:</strong> Unprecedented malware designed to manipulate industrial safety systems,
+        representing an escalation from IT disruption to physical kinetic threat.
       </div>
 
       <div style="line-height: 1.8;">
         <h3 class="mb-4" style="color: var(--color-accent);">The Attack Vector</h3>
-        <p class="mb-4">Attackers gained an initial foothold on the IT network before moving laterally into the OT environment. They compromised an engineering workstation that was used to program the plant's Triconex Safety Instrumented Systems (SIS).</p>
+        <p class="mb-4">Attackers gained an initial foothold on the IT network before moving laterally into the OT
+          environment. They compromised an engineering workstation that was used to program the plant's Triconex Safety
+          Instrumented Systems (SIS).</p>
 
         <h3 class="mb-4" style="color: var(--color-accent);">Purdue Model Failure</h3>
-        <p class="mb-4">The core architectural failure was the lack of strict segmentation between Level 2 (Supervisory Control) and Level 1 (Basic Control/Safety). The SIS network should operate entirely autonomously from the primary DCS to prevent common-mode failures.</p>
+        <p class="mb-4">The core architectural failure was the lack of strict segmentation between Level 2 (Supervisory
+          Control) and Level 1 (Basic Control/Safety). The SIS network should operate entirely autonomously from the
+          primary DCS to prevent common-mode failures.</p>
 
-        <div style="background: #000; color: #0f0; padding: 16px; font-family: var(--font-display); border-radius: var(--border-radius); margin-bottom: 24px;">
+        <div
+          style="background: #000; color: #0f0; padding: 16px; font-family: var(--font-display); border-radius: var(--border-radius); margin-bottom: 24px;">
           > SCANNING TRICONEX SIS NODES...<br>
           > VULNERABILITY DETECTED: UNRESTRICTED ENGINEERING ACCESS<br>
           > PAYLOAD INJECTED TO FIRMWARE
         </div>
 
         <h3 class="mb-4" style="color: var(--color-accent);">The ThreatForge Remediation</h3>
-        <p class="mb-4">For our clients, mitigating this threat involves implementing hardware-enforced unidirectional gateways (data diodes) for SIS monitoring and enforcing physical key switches for any logic updates to Level 1 safety controllers.</p>
+        <p class="mb-4">For our clients, mitigating this threat involves implementing hardware-enforced unidirectional
+          gateways (data diodes) for SIS monitoring and enforcing physical key switches for any logic updates to Level 1
+          safety controllers.</p>
       </div>
 
       <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 40px; text-align: center;">
@@ -101,27 +114,54 @@
     <div class="footer-grid">
       <div class="footer-col">
         <a href="index.html" class="navbar-logo" style="display: flex; align-items: center;">
-          <img src="assets/images/threatforge-logo.svg" alt="ThreatForge" style="height: 36px; width: auto; display: block;">
+          <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+            style="height: 36px; width: auto; display: block;">
         </a>
         <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge badge-success">GICSP</span>
+          <span class="badge badge-success">CISSP</span>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <ul><li><a href="services.html">ICS Risk Assessment</a></li></ul>
+        <ul>
+          <li><a href="services.html">ICS Risk Assessment</a></li>
+          <li><a href="services.html">OT Network Segmentation</a></li>
+          <li><a href="services.html">Patch Management</a></li>
+          <li><a href="services.html">Incident Response</a></li>
+          <li><a href="services.html">Compliance Auditing</a></li>
+          <li><a href="services.html">OT Pen Testing</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul><li><a href="threat-cases.html">Threat Cases</a></li></ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="threat-cases.html">Threat Cases</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <ul><li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li></ul>
+        <ul>
+          <li><a href="mailto:contact@threatforge.com"><i class="ph ph-envelope"></i> info@threatforge.com</a></li>
+          <li><a href="#"><i class="ph ph-linkedin-logo"></i> LinkedIn</a></li>
+          <li><a href="#"><i class="ph ph-x-logo"></i> Twitter / X</a></li>
+          <li><a href="#"><i class="ph ph-github-logo"></i> GitHub</a></li>
+          <li>Global Operations | Houston, TX</li>
+          <li><small style="color: var(--color-muted);">For sensitive communications, request PGP key.</small></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+      <p>© 2026 ICSEC. All engagements governed by signed NDA.</p>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

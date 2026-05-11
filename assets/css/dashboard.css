@@ -263,8 +263,9 @@ html[dir="rtl"] .data-table th, html[dir="rtl"] .data-table td { text-align: rig
 .badge-warning { background-color: rgba(245, 166, 35, 0.1); color: var(--color-warning); border-color: rgba(245, 166, 35, 0.2); }
 .badge-warning:hover { background-color: var(--color-warning); color: white; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3); }
 
-.badge-muted { background-color: rgba(74, 96, 112, 0.1); color: var(--color-muted); border-color: var(--color-border); }
-.badge-muted:hover { background-color: var(--color-muted); color: white; transform: translateY(-1px); }
+.badge-muted { background-color: transparent; color: var(--color-muted); border-color: var(--color-border); }
+.badge-muted:hover { background-color: var(--color-muted); color: #FFFFFF; transform: translateY(-1px); }
+[data-theme="dark"] .badge-muted:hover { color: #000000; background-color: var(--color-text); }
 
 .badge-success { background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); border-color: rgba(0, 204, 122, 0.2); }
 .badge-success:hover { background-color: var(--color-accent); color: white; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 204, 122, 0.3); }

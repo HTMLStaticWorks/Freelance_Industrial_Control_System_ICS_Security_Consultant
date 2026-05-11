@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo" style="display: flex; align-items: center;">
-      <img src="assets/images/threatforge-logo.svg" alt="ThreatForge" style="height: 36px; width: auto; display: block;">
+      <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+        style="height: 36px; width: auto; display: block;">
     </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -58,34 +61,47 @@
   <main style="padding-top: 80px; padding-bottom: 80px;">
     <article style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
       <div style="margin-bottom: 32px;">
-        <a href="blog.html" style="color: var(--color-accent); font-family: var(--font-display);"><i class="ph ph-arrow-left"></i> Back to Blog</a>
+        <a href="blog.html" style="color: var(--color-accent); font-family: var(--font-display);"><i
+            class="ph ph-arrow-left"></i> Back to Blog</a>
       </div>
-      
+
       <div style="display: flex; gap: 16px; margin-bottom: 24px; align-items: center;">
         <span class="badge badge-muted">Best Practices</span>
         <span style="color: var(--color-muted); font-family: var(--font-display); font-size: 0.9rem;">5 MIN READ</span>
       </div>
-      
-      <h1 class="section-title text-left mb-4" style="text-align: left;">Why Flat OT Networks Are a Ticking Time Bomb</h1>
+
+      <h1 class="section-title text-left mb-4" style="text-align: left;">Why Flat OT Networks Are a Ticking Time Bomb
+      </h1>
       <p style="color: var(--color-muted); margin-bottom: 40px;">Published: May 2025 | By: ThreatForge Consultant</p>
 
-      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80" alt="Network cables" style="width: 100%; height: auto; border: 1px solid var(--color-border); margin-bottom: 40px; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+        alt="Network cables"
+        style="width: 100%; height: auto; border: 1px solid var(--color-border); margin-bottom: 40px; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
 
       <div style="line-height: 1.8;">
-        <p class="mb-4">One of the most common architectural flaws we encounter during ICS Risk Assessments is the dreaded "flat" OT network. In these environments, every device from a Level 3 Historian down to a Level 1 PLC resides on the same subnet, fully routable and entirely unsegmented.</p>
-        
+        <p class="mb-4">One of the most common architectural flaws we encounter during ICS Risk Assessments is the
+          dreaded "flat" OT network. In these environments, every device from a Level 3 Historian down to a Level 1 PLC
+          resides on the same subnet, fully routable and entirely unsegmented.</p>
+
         <h3 class="mb-4" style="color: var(--color-accent);">The Illusion of the Air Gap</h3>
-        <p class="mb-4">Many plant managers operate under the assumption that their network is "air-gapped" because it lacks a direct internet connection. However, the reality is that OT networks are heavily interconnected with IT systems for data collection, vendor remote support, and business analytics.</p>
+        <p class="mb-4">Many plant managers operate under the assumption that their network is "air-gapped" because it
+          lacks a direct internet connection. However, the reality is that OT networks are heavily interconnected with
+          IT systems for data collection, vendor remote support, and business analytics.</p>
 
         <h3 class="mb-4" style="color: var(--color-accent);">Implementing Zones and Conduits</h3>
-        <p class="mb-4">The solution, prescribed by IEC 62443, is to implement a Zone and Conduit model. This involves grouping assets with similar security requirements into distinct zones and strictly controlling the communication conduits between them. Crucially, a demilitarized zone (IDMZ) must sit between the enterprise network (Level 4) and the manufacturing operations (Level 3).</p>
+        <p class="mb-4">The solution, prescribed by IEC 62443, is to implement a Zone and Conduit model. This involves
+          grouping assets with similar security requirements into distinct zones and strictly controlling the
+          communication conduits between them. Crucially, a demilitarized zone (IDMZ) must sit between the enterprise
+          network (Level 4) and the manufacturing operations (Level 3).</p>
       </div>
 
       <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 40px;">
         <h4 style="font-family: var(--font-display); margin-bottom: 16px;">Related Posts</h4>
         <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="#" style="color: var(--color-accent); text-decoration: underline;">IEC 62443 vs NIST 800-82: Which Framework?</a>
-          <a href="#" style="color: var(--color-accent); text-decoration: underline;">Safe Active Scanning in Legacy Environments</a>
+          <a href="#" style="color: var(--color-accent); text-decoration: underline;">IEC 62443 vs NIST 800-82: Which
+            Framework?</a>
+          <a href="#" style="color: var(--color-accent); text-decoration: underline;">Safe Active Scanning in Legacy
+            Environments</a>
         </div>
       </div>
     </article>
@@ -96,14 +112,54 @@
     <div class="footer-grid">
       <div class="footer-col">
         <a href="index.html" class="navbar-logo" style="display: flex; align-items: center;">
-      <img src="assets/images/threatforge-logo.svg" alt="ThreatForge" style="height: 36px; width: auto; display: block;">
-    </a>
+          <img src="assets/images/threatforge-logo.svg" alt="ThreatForge"
+            style="height: 36px; width: auto; display: block;">
+        </a>
+        <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
+        <div style="display: flex; gap: 8px;">
+          <span class="badge badge-success">GICSP</span>
+          <span class="badge badge-success">CISSP</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">ICS Risk Assessment</a></li>
+          <li><a href="services.html">OT Network Segmentation</a></li>
+          <li><a href="services.html">Patch Management</a></li>
+          <li><a href="services.html">Incident Response</a></li>
+          <li><a href="services.html">Compliance Auditing</a></li>
+          <li><a href="services.html">OT Pen Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="threat-cases.html">Threat Cases</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@threatforge.com"><i class="ph ph-envelope"></i> info@threatforge.com</a></li>
+          <li><a href="#"><i class="ph ph-linkedin-logo"></i> LinkedIn</a></li>
+          <li><a href="#"><i class="ph ph-x-logo"></i> Twitter / X</a></li>
+          <li><a href="#"><i class="ph ph-github-logo"></i> GitHub</a></li>
+          <li>Global Operations | Houston, TX</li>
+          <li><small style="color: var(--color-muted);">For sensitive communications, request PGP key.</small></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 ICSEC. All engagements governed by signed NDA.</p>
+      <p>© 2026 ICSEC. All engagements governed by signed NDA.</p>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
