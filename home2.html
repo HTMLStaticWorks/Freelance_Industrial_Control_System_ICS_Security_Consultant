@@ -50,7 +50,7 @@
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="dashboard.html">Dashboard</a>
-      <a href="login.html">Login</a>
+      <a href="login.html" class="btn btn-primary" style="margin-top: 24px; width: 100%; text-align: center;">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -187,97 +187,64 @@
         <p class="section-subtitle">A structured, transparent methodology from first contact to full remediation.</p>
       </div>
 
-      <div style="max-width: 900px; margin: 0 auto; position: relative;">
+      <div class="engagement-timeline">
 
         <!-- Vertical connector line -->
-        <div
-          style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--color-border); transform: translateX(-50%); z-index: 0;">
-        </div>
+        <div class="timeline-line"></div>
 
         <!-- Step 1 -->
-        <div
-          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
-          <div style="flex: 1; text-align: right; padding-right: 40px;">
-            <div
-              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
-              [ STEP 01 ]</div>
-            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Discovery Call</h3>
-            <p class="card-text" style="font-size: 0.9rem;">A confidential 30-minute call to understand your
-              environment, risk appetite, and immediate concerns. No commitment required.</p>
+        <div class="timeline-step step-left">
+          <div class="step-content">
+            <div class="step-label">[ STEP 01 ]</div>
+            <h3 class="step-title">Discovery Call</h3>
+            <p class="step-text">A confidential 30-minute call to understand your environment, risk appetite, and immediate concerns. No commitment required.</p>
           </div>
-          <div
-            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
-            01</div>
-          <div style="flex: 1; padding-left: 40px;"></div>
+          <div class="step-number">01</div>
+          <div class="step-spacer"></div>
         </div>
 
         <!-- Step 2 -->
-        <div
-          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
-          <div style="flex: 1; padding-right: 40px;"></div>
-          <div
-            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
-            02</div>
-          <div style="flex: 1; padding-left: 40px;">
-            <div
-              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
-              [ STEP 02 ]</div>
-            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Scoping & NDA</h3>
-            <p class="card-text" style="font-size: 0.9rem;">We define the engagement boundaries, asset inventory
-              targets, Purdue levels in scope, and sign the mutual NDA before any work begins.</p>
+        <div class="timeline-step step-right">
+          <div class="step-spacer"></div>
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-label">[ STEP 02 ]</div>
+            <h3 class="step-title">Scoping & NDA</h3>
+            <p class="step-text">We define the engagement boundaries, asset inventory targets, Purdue levels in scope, and sign the mutual NDA before any work begins.</p>
           </div>
         </div>
 
         <!-- Step 3 -->
-        <div
-          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
-          <div style="flex: 1; text-align: right; padding-right: 40px;">
-            <div
-              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
-              [ STEP 03 ]</div>
-            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">On-Site Assessment</h3>
-            <p class="card-text" style="font-size: 0.9rem;">Passive and active discovery using OT-safe protocols. We
-              walk every level of the Purdue model — from enterprise down to field devices — without disrupting live
-              processes.</p>
+        <div class="timeline-step step-left">
+          <div class="step-content">
+            <div class="step-label">[ STEP 03 ]</div>
+            <h3 class="step-title">On-Site Assessment</h3>
+            <p class="step-text">Passive and active discovery using OT-safe protocols. We walk every level of the Purdue model — from enterprise down to field devices — without disrupting live processes.</p>
           </div>
-          <div
-            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
-            03</div>
-          <div style="flex: 1; padding-left: 40px;"></div>
+          <div class="step-number">03</div>
+          <div class="step-spacer"></div>
         </div>
 
         <!-- Step 4 -->
-        <div
-          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
-          <div style="flex: 1; padding-right: 40px;"></div>
-          <div
-            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
-            04</div>
-          <div style="flex: 1; padding-left: 40px;">
-            <div
-              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
-              [ STEP 04 ]</div>
-            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Reporting</h3>
-            <p class="card-text" style="font-size: 0.9rem;">A prioritised, executive-ready report mapping all findings
-              to IEC 62443 or NIST 800-82 controls. Includes risk ratings, remediation roadmap, and quick-win actions.
-            </p>
+        <div class="timeline-step step-right">
+          <div class="step-spacer"></div>
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-label">[ STEP 04 ]</div>
+            <h3 class="step-title">Reporting</h3>
+            <p class="step-text">A prioritised, executive-ready report mapping all findings to IEC 62443 or NIST 800-82 controls. Includes risk ratings, remediation roadmap, and quick-win actions.</p>
           </div>
         </div>
 
         <!-- Step 5 -->
-        <div style="display: flex; align-items: center; gap: 40px; position: relative; z-index: 1;">
-          <div style="flex: 1; text-align: right; padding-right: 40px;">
-            <div
-              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
-              [ STEP 05 ]</div>
-            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Remediation Support</h3>
-            <p class="card-text" style="font-size: 0.9rem;">Optional hands-on support to implement segmentation,
-              coordinate vendor patches, and validate fixes. Available as a retainer or fixed-scope engagement.</p>
+        <div class="timeline-step step-left">
+          <div class="step-content">
+            <div class="step-label">[ STEP 05 ]</div>
+            <h3 class="step-title">Remediation Support</h3>
+            <p class="step-text">Optional hands-on support to implement segmentation, coordinate vendor patches, and validate fixes. Available as a retainer or fixed-scope engagement.</p>
           </div>
-          <div
-            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
-            05</div>
-          <div style="flex: 1; padding-left: 40px;"></div>
+          <div class="step-number">05</div>
+          <div class="step-spacer"></div>
         </div>
 
       </div>
