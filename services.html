@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThreatForge | Services</title>
-  <meta name="description" content="Industrial cybersecurity services: ICS risk assessments, network segmentation, and patch management.">
+  <meta name="description"
+    content="Industrial cybersecurity services: ICS risk assessments, network segmentation, and patch management.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -17,17 +20,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html" class="active">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -40,9 +43,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html" class="active">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -51,87 +56,233 @@
   </aside>
 
   <main>
-    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+    <section class="page-header"
+      style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
       <h1 class="section-title">Core Capabilities</h1>
-      <p class="section-subtitle">Specialized OT cybersecurity solutions to secure critical manufacturing infrastructure.</p>
+      <p class="section-subtitle">Specialized OT cybersecurity solutions to secure critical manufacturing
+        infrastructure.</p>
     </section>
 
     <section id="services-grid">
       <div class="card-grid">
-        <div class="card">
-          <i class="ph ph-shield-warning card-icon"></i>
-          <h3 class="card-title">ICS Risk Assessment</h3>
-          <p class="card-text">Comprehensive Purdue-level asset inventory and vulnerability mapping. We identify unprotected PLCs, unpatched HMIs, and undocumented external connections.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Assessment</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img src="assets/images/service1.jpg" alt="ICS Risk Assessment"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-shield-warning" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 01 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">ICS Risk Assessment</h3>
+            <p class="card-text">Comprehensive Purdue-level asset inventory and vulnerability mapping. We identify
+              unprotected PLCs, unpatched HMIs, and undocumented external connections.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Assessment</a></div>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-git-branch card-icon"></i>
-          <h3 class="card-title">OT Network Segmentation</h3>
-          <p class="card-text">Design and implementation of DMZs, IDMZ, and zone/conduit models strictly adhering to IEC 62443 standards to prevent IT-to-OT lateral movement.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Engagement</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img src="assets/images/service2.jpg" alt="OT Network Segmentation"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-git-branch" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 02 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">OT Network Segmentation</h3>
+            <p class="card-text">Design and implementation of DMZs, IDMZ, and zone/conduit models strictly adhering to
+              IEC 62443 standards to prevent IT-to-OT lateral movement.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Engagement</a></div>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-wrench card-icon"></i>
-          <h3 class="card-title">Patch Management</h3>
-          <p class="card-text">Safe, vendor-coordinated patch testing and deployment for mission-critical systems including Siemens, Rockwell, and Honeywell DCS platforms.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Engagement</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img src="assets/images/service3.jpg" alt="Patch Management"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-wrench" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 03 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Patch Management</h3>
+            <p class="card-text">Safe, vendor-coordinated patch testing and deployment for mission-critical systems
+              including Siemens, Rockwell, and Honeywell DCS platforms.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Scope Engagement</a></div>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-siren card-icon"></i>
-          <h3 class="card-title">Incident Response</h3>
-          <p class="card-text">OT-specific IR playbooks, digital forensics, and recovery planning tailored to prioritize safety and availability over raw data confidentiality.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Request Retainer</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img src="assets/images/service4.jpg" alt="Incident Response"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-siren" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 04 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Incident Response</h3>
+            <p class="card-text">OT-specific IR playbooks, digital forensics, and recovery planning tailored to
+              prioritize safety and availability over raw data confidentiality.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Request Retainer</a></div>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-clipboard-text card-icon"></i>
-          <h3 class="card-title">Compliance Auditing</h3>
-          <p class="card-text">Gap assessments and readiness audits for IEC 62443, NIST SP 800-82 rev3, NIS2 Directive, and NERC CIP regulatory frameworks.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Start Audit</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&h=400&q=80"
+              alt="Compliance Auditing"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-clipboard-text" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 05 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Framework Alignment</h3>
+            <p class="card-text">Gap assessments and readiness audits for IEC 62443, NIST SP 800-82 rev3, NIS2
+              Directive, and NERC CIP regulatory frameworks.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Start Audit</a></div>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-bug card-icon"></i>
-          <h3 class="card-title">OT Penetration Testing</h3>
-          <p class="card-text">Safe, tightly-scoped red teaming designed to identify logical flaws and bypasses without risking disruption to live physical processes.</p>
-          <div class="mt-4"><a href="contact.html" class="btn btn-outline">Request Details</a></div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img
+              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=400&q=80"
+              alt="OT Penetration Testing"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-bug" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 06 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">OT Penetration Testing</h3>
+            <p class="card-text">Safe, tightly-scoped red teaming designed to identify logical flaws and bypasses
+              without risking disruption to live physical processes.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Request Details</a></div>
+          </div>
         </div>
+
+        <!-- NEW Card 7: SCADA Security Training -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&h=400&q=80"
+              alt="SCADA Security Training"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-chalkboard-teacher" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 07 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">SCADA Security Training</h3>
+            <p class="card-text">Hands-on operator and engineering team training covering OT threat awareness, safe
+              remote access practices, and incident escalation procedures specific to your environment.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Book Training</a></div>
+          </div>
+        </div>
+
+        <!-- NEW Card 8: Vendor Risk Management -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden;">
+            <img src="assets/images/service8.jpg" alt="Vendor Risk Management"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div style="position: absolute; top: 16px; left: 16px;">
+              <i class="ph ph-handshake" style="font-size: 2rem; color: var(--color-accent);"></i>
+            </div>
+            <div
+              style="position: absolute; top: 16px; right: 16px; font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 2px; color: var(--color-accent); background: rgba(0,0,0,0.7); padding: 4px 10px;">
+              [ 08 ]</div>
+          </div>
+          <div style="padding: 24px 28px 28px;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Vendor Risk Management</h3>
+            <p class="card-text">Assessment and governance of third-party OT vendor access. We audit remote support
+              channels, enforce least-privilege access policies, and eliminate dormant vendor connections.</p>
+            <div class="mt-4"><a href="contact.html" class="btn btn-outline">Start Assessment</a></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="pricing" style="background-color: var(--color-surface); text-align: center;">
-      <h2 class="section-title">Pricing Methodology</h2>
-      <p class="section-subtitle mb-4">All services are engagement-based. Contact us for scoping tailored to your plant's unique architecture and risk profile.</p>
-      
-      <div style="overflow-x: auto;">
-        <table class="data-table" style="max-width: 800px; margin: 0 auto; text-align: left;">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Self-Managed</th>
-              <th>ThreatForge Consulting</th>
-              <th>Full Managed SOC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Asset Visibility</td>
-              <td>Manual Spreadsheets</td>
-              <td style="color: var(--color-accent);">Automated Discovery (Safe)</td>
-              <td>Continuous DPI</td>
-            </tr>
-            <tr>
-              <td>Remediation Planning</td>
-              <td>Ad-hoc</td>
-              <td style="color: var(--color-accent);">Prioritized by Purdue Level</td>
-              <td>Automated Ticketing</td>
-            </tr>
-            <tr>
-              <td>Compliance Mapping</td>
-              <td>Internal Effort</td>
-              <td style="color: var(--color-accent);">Mapped to IEC 62443</td>
-              <td>Continuous Reporting</td>
-            </tr>
-          </tbody>
-        </table>
+    <section id="faq" style="background-color: var(--color-surface); padding-top: 80px; padding-bottom: 80px;">
+      <div class="section-header">
+        <h2 class="section-title">Engagement FAQ</h2>
+        <p class="section-subtitle">Common questions about OT security assessments and methodology.</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">Do you support legacy Level 1 systems?</summary>
+            <div class="faq-answer">
+              <p>Yes. We specialize in safe asset discovery for legacy systems (e.g., PLC-5, SLC 500, S7-300). We use passive monitoring and OT-native protocols to ensure that inventorying does not disrupt live physical processes.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">How do you handle sensitive plant data?</summary>
+            <div class="faq-answer">
+              <p>All engagements are governed by strict NDAs. We prioritize on-site analysis to keep data within your perimeter and can operate in completely air-gapped environments. For remote analysis, we provide encrypted transfer channels.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">What compliance frameworks do you use?</summary>
+            <div class="faq-answer">
+              <p>Our methodology is primarily built on **ISA/IEC 62443** and **NIST SP 800-82**. We also map findings to sector-specific mandates like NERC CIP (Energy) and NIS2 (EU Manufacturing) where applicable.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -143,8 +294,10 @@
         <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
         <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
         <div style="display: flex; gap: 8px;">
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
+          <span class="badge badge-success"
+            style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
+          <span class="badge badge-success"
+            style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
         </div>
       </div>
       <div class="footer-col">
@@ -162,8 +315,7 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="threat-cases.html">Threat Cases</a></li>
-          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
@@ -186,4 +338,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

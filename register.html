@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,27 @@
   <meta name="description" content="Secure Client Registration.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body style="overflow: hidden;">
+
+<body>
   <div class="auth-wrapper">
+    <div class="auth-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"
+        style="background: var(--color-surface); border: 1px solid var(--color-border);"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"
+        style="background: var(--color-surface); border: 1px solid var(--color-border);"><i
+          class="ph ph-arrows-left-right"></i></button>
+    </div>
+
     <div class="auth-panel" style="max-width: 600px;">
+      <a href="index.html" class="navbar-logo"
+        style="margin-bottom: 32px; display: block; text-align: center; text-decoration: none;">[ThreatForge]<span
+          class="cursor">_</span></a>
       <h1 class="auth-header">SECURE REGISTRATION</h1>
-      
+
       <form id="registerForm" class="validate-form">
-        <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
           <div class="form-group" style="margin-bottom: 0;">
             <label class="form-label" for="fullName">Full Name</label>
             <input type="text" id="fullName" class="form-control" required>
@@ -29,35 +43,46 @@
           <label class="form-label" for="email">Corporate Email</label>
           <input type="email" id="email" class="form-control" required>
         </div>
-        
-        <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
           <div class="form-group" style="margin-bottom: 0;">
             <label class="form-label" for="password">Password</label>
-            <input type="password" id="password" class="form-control" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$" title="Min 8 chars, 1 uppercase, 1 number">
+            <div class="password-wrapper">
+              <input type="password" id="password" class="form-control" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+                title="Min 8 chars, 1 uppercase, 1 number">
+              <span class="password-toggle"><i class="ph ph-eye"></i></span>
+            </div>
           </div>
           <div class="form-group" style="margin-bottom: 0;">
             <label class="form-label" for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" class="form-control" required>
+            <div class="password-wrapper">
+              <input type="password" id="confirmPassword" class="form-control" required>
+              <span class="password-toggle"><i class="ph ph-eye"></i></span>
+            </div>
             <span class="form-error">⚠ Passwords must match</span>
           </div>
         </div>
 
         <div class="form-group" style="display: flex; align-items: flex-start; gap: 12px; margin-top: 24px;">
           <input type="checkbox" id="nda" required style="margin-top: 4px;">
-          <label for="nda" style="font-size: 0.9rem; color: var(--color-muted);">I accept the Terms & Conditions and Non-Disclosure Agreement (NDA). I understand that all shared assessment data is strictly confidential.</label>
+          <label for="nda" style="font-size: 0.9rem; color: var(--color-muted);">I accept the <a href="#" class="auth-link">Terms & Conditions</a> and
+            <a href="#" class="auth-link">privacy policy</a>.</label>
         </div>
-        
-        <button type="submit" class="btn btn-login" style="width: 100%; justify-content: center; margin: 24px 0; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">REGISTER</button>
-        
-        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
-          <button type="button" class="btn" style="background: #fff; color: #757575; border: 1px solid #ccc; width: 100%;">
-            <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 16px; margin-right: 8px;"> Continue with Google
+
+        <button type="submit" class="btn btn-login"
+          style="width: 100%; justify-content: center; margin: 24px 0; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">REGISTER</button>
+
+        <div
+          style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+          <button type="button" class="btn"
+            style="background: #fff; color: #000; border: 1px solid var(--color-border); width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="ph ph-google-logo" style="font-size: 1.2rem;"></i> Continue with Google
           </button>
-          <button type="button" class="btn btn-outline" style="width: 100%;">
-            Continue with Email
+          <button type="button" class="btn btn-outline" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="ph ph-apple-logo" style="font-size: 1.2rem;"></i> Continue with Apple
           </button>
         </div>
-        
+
         <div class="text-center mt-4" style="font-family: var(--font-display); font-size: 0.9rem;">
           <a href="login.html" style="color: var(--color-muted);">Return to Login</a>
         </div>
@@ -66,4 +91,5 @@
   </div>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

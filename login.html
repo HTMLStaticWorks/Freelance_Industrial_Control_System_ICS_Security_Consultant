@@ -7,12 +7,21 @@
   <meta name="description" content="Secure Client Access Portal.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body style="overflow: hidden;">
+<body>
   <!-- Note: No navbar, no theme toggle, no back to home -->
   <div class="auth-wrapper">
-    <!-- Animated scanline background managed in CSS via ::after on body in dark mode -->
+    <div class="auth-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"
+        style="background: var(--color-surface); border: 1px solid var(--color-border);"></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"
+        style="background: var(--color-surface); border: 1px solid var(--color-border);"><i
+          class="ph ph-arrows-left-right"></i></button>
+    </div>
+
     <div class="auth-panel">
+      <a href="index.html" class="navbar-logo" style="margin-bottom: 32px; display: block; text-align: center; text-decoration: none;">[ThreatForge]<span class="cursor">_</span></a>
       <h1 class="auth-header">SECURE CLIENT ACCESS</h1>
       
       <form id="loginForm" class="validate-form">
@@ -24,18 +33,28 @@
         
         <div class="form-group">
           <label class="form-label" for="password">Password</label>
-          <input type="password" id="password" class="form-control" required>
+          <div class="password-wrapper">
+            <input type="password" id="password" class="form-control" required>
+            <span class="password-toggle"><i class="ph ph-eye"></i></span>
+          </div>
           <span class="form-error">⚠ Password required</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--color-muted);">
+            <input type="checkbox" id="remember" style="accent-color: var(--color-accent);"> Remember me
+          </label>
+          <a href="forgot-password.html" class="auth-link" style="font-family: var(--font-display);">FORGOT_PASSWORD?</a>
         </div>
         
         <button type="submit" class="btn btn-login" style="width: 100%; justify-content: center; margin-bottom: 24px; padding: 12px; font-size: 1.1rem; border-color: var(--color-accent); color: var(--color-accent);">LOGIN</button>
         
         <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--color-border); padding-top: 24px;">
-          <button type="button" class="btn" style="background: #fff; color: #757575; border: 1px solid #ccc; width: 100%;">
-            <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 16px; margin-right: 8px;"> Continue with Google
+          <button type="button" class="btn" style="background: #fff; color: #000; border: 1px solid var(--color-border); width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="ph ph-google-logo" style="font-size: 1.2rem;"></i> Continue with Google
           </button>
-          <button type="button" class="btn btn-outline" style="width: 100%;">
-            Continue with Email
+          <button type="button" class="btn btn-outline" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="ph ph-apple-logo" style="font-size: 1.2rem;"></i> Continue with Apple
           </button>
         </div>
         

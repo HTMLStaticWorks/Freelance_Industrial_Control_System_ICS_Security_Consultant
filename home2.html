@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <!-- Navbar will be identical, omitting for brevity in thought, but must include in file -->
   <header class="navbar">
@@ -18,17 +20,17 @@
       <a href="home2.html" class="active">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -41,9 +43,11 @@
       <a href="home2.html" class="active">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -53,52 +57,340 @@
 
   <main>
     <section class="split-hero" style="display: flex; flex-wrap: wrap; min-height: 80vh; padding: 0;">
-      <!-- Image/Parallax Background -->
-      <div style="flex: 1 1 50%; background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-attachment: fixed; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-         <div style="background: rgba(0,0,0,0.7); padding: 40px; text-align: center; color: #fff;">
-            <h1 class="section-title">Industrial Cyber Defense</h1>
-            <p class="section-subtitle" style="color: #ccc;">Parallax Hero Integration</p>
-         </div>
+
+      <!-- LEFT: Image/Parallax Side -->
+      <div
+        style="flex: 1 1 50%; background-image: url('assets/images/perdue.jpg'); background-size: cover; background-attachment: fixed; background-position: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div
+          style="background: rgba(0,0,0,0.75); padding: 48px 40px; text-align: center; color: #fff; width: 100%; display: flex; flex-direction: column; align-items: center;">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 16px;">
+            ● ACTIVE DEFENSE MODE</div>
+          <h1 class="section-title" style="text-align: center; color: #fff; margin-bottom: 16px;">Industrial Cyber
+            Defense</h1>
+          <p class="section-subtitle" style="color: rgba(255,255,255,0.65); text-align: center; max-width: 380px;">
+            Securing Level 1 through Level 4 across the Purdue Model.</p>
+        </div>
       </div>
-      <div style="flex: 1 1 50%; background-color: var(--color-surface); padding: 80px 5%; display: flex; flex-direction: column; justify-content: center;">
-        <h2 class="section-title text-left">Advanced Threat Mitigation</h2>
-        <p class="mb-4 text-left">Protecting Level 1 controls from nation-state actors and untargeted ransomware alike.</p>
-        <div style="display: flex; gap: 16px;">
+
+      <!-- RIGHT: Text Side -->
+      <div
+        style="flex: 1 1 50%; background-color: var(--color-surface); padding: 80px 5%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <div
+          style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 16px;">
+          [ THREAT MITIGATION ]</div>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 16px;">Advanced Threat Mitigation</h2>
+        <p class="mb-4" style="color: var(--color-muted); line-height: 1.8; max-width: 420px; text-align: center;">
+          Protecting Level 1 controls from nation-state actors and untargeted ransomware alike.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 32px; flex-wrap: wrap;">
           <a href="contact.html" class="btn btn-primary">Start Engagement</a>
+          <a href="services.html" class="btn btn-outline">View Services</a>
         </div>
-        <div class="live-ticker mt-4" style="background: #000; color: var(--color-accent); padding: 8px 16px; font-family: var(--font-display); overflow: hidden; white-space: nowrap;">
-          <marquee scrollamount="5">LIVE THREAT FEED: CVE-2024-12345 (Critical) Siemens S7-1500 firmware bypass -- CVE-2023-98765 (High) Rockwell Automation FactoryTalk escalation -- IEC 62443 compliance updates published.</marquee>
+        <div class="live-ticker"
+          style="width: 100%; background: #000; color: var(--color-accent); padding: 8px 16px; font-family: var(--font-display); overflow: hidden; white-space: nowrap; border-top: 1px solid var(--color-accent); border-bottom: 1px solid var(--color-accent);">
+          <marquee scrollamount="5">LIVE THREAT FEED: CVE-2024-12345 (Critical) Siemens S7-1500 firmware bypass
+            &nbsp;—&nbsp; CVE-2023-98765 (High) Rockwell Automation FactoryTalk escalation &nbsp;—&nbsp; IEC 62443
+            compliance updates published.</marquee>
         </div>
       </div>
+
     </section>
 
     <section id="zigzag-features">
       <div class="section-header">
         <h2 class="section-title">Methodology</h2>
       </div>
-      
-      <div class="zigzag-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
+
+      <!-- Row 1: Image Left, Text Right -->
+      <div class="zigzag-row"
+        style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
         <div style="flex: 1 1 400px;">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Server infrastructure" style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+          <img src="assets/images/asset1.jpg" alt="Server infrastructure asset discovery"
+            style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); width: 100%; display: block;">
         </div>
-        <div style="flex: 1 1 400px;">
-          <h3 class="card-title">Assess</h3>
-          <p class="card-text mb-4">Deep packet inspection and active querying using safe protocols to identify PLCs, RTUs, and HMIs across the network without disrupting live processes.</p>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 12px;">
+            [ STEP 01 ]</div>
+          <h3 class="card-title" style="font-size: 1.8rem; margin-bottom: 16px;">Assess</h3>
+          <p class="card-text mb-4" style="max-width: 400px;">Deep packet inspection and active querying using safe
+            protocols to identify PLCs, RTUs, and HMIs across the network without disrupting live processes.</p>
           <a href="services.html" class="btn btn-outline">Learn More</a>
         </div>
       </div>
-      
-      <div class="zigzag-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
+
+      <!-- Row 2: Image Right, Text Left -->
+      <div class="zigzag-row"
+        style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
         <div style="flex: 1 1 400px;">
-          <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?auto=format&fit=crop&w=800&q=80" alt="Control Room" style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
+          <img src="assets/images/asset2.jpg" alt="Control room network segmentation"
+            style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); width: 100%; display: block;">
         </div>
-        <div style="flex: 1 1 400px;">
-          <h3 class="card-title">Segment</h3>
-          <p class="card-text mb-4">Implementation of robust zone and conduit models. Enforcing IDMZ boundaries to ensure IT compromises do not cascade into OT environments.</p>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 12px;">
+            [ STEP 02 ]</div>
+          <h3 class="card-title" style="font-size: 1.8rem; margin-bottom: 16px;">Segment</h3>
+          <p class="card-text mb-4" style="max-width: 400px;">Implementation of robust zone and conduit models.
+            Enforcing IDMZ boundaries to ensure IT compromises do not cascade into OT environments.</p>
           <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+      <div class="zigzag-row"
+        style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
+        <div style="flex: 1 1 400px;">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+            alt="Security monitoring dashboard"
+            style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); width: 100%; display: block;">
+        </div>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 12px;">
+            [ STEP 03 ]</div>
+          <h3 class="card-title" style="font-size: 1.8rem; margin-bottom: 16px;">Monitor</h3>
+          <p class="card-text mb-4" style="max-width: 400px;">Continuous passive monitoring of OT traffic using anomaly
+            detection tuned to industrial protocols — Modbus, DNP3, EtherNet/IP — without generating disruptive scan
+            traffic.</p>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Row 4: Image Right, Text Left -->
+      <div class="zigzag-row"
+        style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; flex-direction: row-reverse;">
+        <div style="flex: 1 1 400px;">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+            alt="Engineer hardening industrial systems"
+            style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); width: 100%; display: block;">
+        </div>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 12px;">
+            [ STEP 04 ]</div>
+          <h3 class="card-title" style="font-size: 1.8rem; margin-bottom: 16px;">Harden</h3>
+          <p class="card-text mb-4" style="max-width: 400px;">Systematic removal of attack surface — disabling legacy
+            protocols, enforcing least privilege, applying vendor-coordinated patches, and validating changes against a
+            dedicated OT testbed.</p>
+          <a href="services.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="process">
+      <div class="section-header">
+        <h2 class="section-title">Engagement Process</h2>
+        <p class="section-subtitle">A structured, transparent methodology from first contact to full remediation.</p>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto; position: relative;">
+
+        <!-- Vertical connector line -->
+        <div
+          style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--color-border); transform: translateX(-50%); z-index: 0;">
+        </div>
+
+        <!-- Step 1 -->
+        <div
+          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
+          <div style="flex: 1; text-align: right; padding-right: 40px;">
+            <div
+              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
+              [ STEP 01 ]</div>
+            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Discovery Call</h3>
+            <p class="card-text" style="font-size: 0.9rem;">A confidential 30-minute call to understand your
+              environment, risk appetite, and immediate concerns. No commitment required.</p>
+          </div>
+          <div
+            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
+            01</div>
+          <div style="flex: 1; padding-left: 40px;"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div
+          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
+          <div style="flex: 1; padding-right: 40px;"></div>
+          <div
+            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
+            02</div>
+          <div style="flex: 1; padding-left: 40px;">
+            <div
+              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
+              [ STEP 02 ]</div>
+            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Scoping & NDA</h3>
+            <p class="card-text" style="font-size: 0.9rem;">We define the engagement boundaries, asset inventory
+              targets, Purdue levels in scope, and sign the mutual NDA before any work begins.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div
+          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
+          <div style="flex: 1; text-align: right; padding-right: 40px;">
+            <div
+              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
+              [ STEP 03 ]</div>
+            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">On-Site Assessment</h3>
+            <p class="card-text" style="font-size: 0.9rem;">Passive and active discovery using OT-safe protocols. We
+              walk every level of the Purdue model — from enterprise down to field devices — without disrupting live
+              processes.</p>
+          </div>
+          <div
+            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
+            03</div>
+          <div style="flex: 1; padding-left: 40px;"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div
+          style="display: flex; align-items: center; gap: 40px; margin-bottom: 64px; position: relative; z-index: 1;">
+          <div style="flex: 1; padding-right: 40px;"></div>
+          <div
+            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
+            04</div>
+          <div style="flex: 1; padding-left: 40px;">
+            <div
+              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
+              [ STEP 04 ]</div>
+            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Reporting</h3>
+            <p class="card-text" style="font-size: 0.9rem;">A prioritised, executive-ready report mapping all findings
+              to IEC 62443 or NIST 800-82 controls. Includes risk ratings, remediation roadmap, and quick-win actions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div style="display: flex; align-items: center; gap: 40px; position: relative; z-index: 1;">
+          <div style="flex: 1; text-align: right; padding-right: 40px;">
+            <div
+              style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 8px;">
+              [ STEP 05 ]</div>
+            <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: 10px;">Remediation Support</h3>
+            <p class="card-text" style="font-size: 0.9rem;">Optional hands-on support to implement segmentation,
+              coordinate vendor patches, and validate fixes. Available as a retainer or fixed-scope engagement.</p>
+          </div>
+          <div
+            style="width: 48px; height: 48px; background: var(--color-accent); color: #000; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);">
+            05</div>
+          <div style="flex: 1; padding-left: 40px;"></div>
+        </div>
+
+      </div>
+      <section id="testimonials" style="background-color: var(--color-surface);">
+        <div class="section-header">
+          <h2 class="section-title">Client Operations</h2>
+          <p class="section-subtitle">Trusted by critical infrastructure leaders.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; max-width: 1100px; margin: 0 auto;">
+
+          <!-- Testimonial 1 -->
+          <div
+            style="flex: 1 1 300px; background: var(--color-bg); border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); display: flex; flex-direction: column; align-items: center; padding: 32px;">
+
+            <!-- Square image -->
+            <div style="width: 160px; height: 160px; position: relative; margin-bottom: 24px; flex-shrink: 0;">
+              <img src="assets/images/testi1.jpg" alt="CEO James Harrington"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(20%); display: block; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);">
+              <!-- Green accent corner -->
+              <div
+                style="position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 20px 20px 0; border-color: transparent var(--color-accent) transparent transparent;">
+              </div>
+              <!-- Green bottom border under image -->
+              <div
+                style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 3px; background: var(--color-accent);">
+              </div>
+            </div>
+
+            <!-- Name & role -->
+            <strong class="display-font"
+              style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; text-align: center;">James
+              Harrington</strong>
+            <div
+              style="color: var(--color-accent); font-size: 0.75rem; font-family: var(--font-display); letter-spacing: 1px; margin-bottom: 20px; text-align: center;">
+              CEO — Tier 1 Chemical Plant</div>
+
+            <!-- Divider -->
+            <div style="width: 40px; border-top: 2px solid var(--color-border); margin-bottom: 20px;"></div>
+
+            <!-- Quote -->
+            <div
+              style="font-size: 1.8rem; color: var(--color-accent); opacity: 0.5; font-family: var(--font-display); line-height: 1; margin-bottom: 12px; text-align: center;">
+              ❝</div>
+            <p class="card-text" style="font-style: italic; line-height: 1.9; text-align: center;">"ThreatForge
+              identified exposed Rockwell PLCs that our previous IT auditors completely missed. Their understanding of
+              Level 1 constraints is unmatched."</p>
+
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            style="flex: 1 1 300px; background: var(--color-bg); border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); display: flex; flex-direction: column; align-items: center; padding: 32px;">
+
+            <!-- Square image -->
+            <div style="width: 160px; height: 160px; position: relative; margin-bottom: 24px; flex-shrink: 0;">
+              <img
+                src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=400&h=400&q=80"
+                alt="Managing Director Sarah Mitchell"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(20%); display: block; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);">
+              <!-- Green accent corner -->
+              <div
+                style="position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 20px 20px 0; border-color: transparent var(--color-accent) transparent transparent;">
+              </div>
+              <!-- Green bottom border under image -->
+              <div
+                style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 3px; background: var(--color-accent);">
+              </div>
+            </div>
+
+            <!-- Name & role -->
+            <strong class="display-font"
+              style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; text-align: center;">Sarah
+              Mitchell</strong>
+            <div
+              style="color: var(--color-accent); font-size: 0.75rem; font-family: var(--font-display); letter-spacing: 1px; margin-bottom: 20px; text-align: center;">
+              MD — Midwest Automotive Manufacturer</div>
+
+            <!-- Divider -->
+            <div style="width: 40px; border-top: 2px solid var(--color-border); margin-bottom: 20px;"></div>
+
+            <!-- Quote -->
+            <div
+              style="font-size: 1.8rem; color: var(--color-accent); opacity: 0.5; font-family: var(--font-display); line-height: 1; margin-bottom: 12px; text-align: center;">
+              ❝</div>
+            <p class="card-text" style="font-style: italic; line-height: 1.9; text-align: center;">"The IEC 62443 gap
+              assessment provided a clear, actionable roadmap. The IDMZ deployment was executed without a single minute
+              of unplanned downtime."</p>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- Bottom CTA -->
+      <div style="text-align: center; margin-top: 64px;">
+        <div
+          style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 16px;">
+          ● READY TO BEGIN</div>
+        <h2 class="section-title" style="margin-bottom: 16px;">Your First Step Costs Nothing.</h2>
+        <p class="section-subtitle" style="margin-bottom: 12px;">A 30-minute confidential call is all it takes to
+          understand your exposure.</p>
+        <p
+          style="color: var(--color-muted); font-family: var(--font-display); font-size: 0.85rem; max-width: 500px; margin: 0 auto 40px; line-height: 1.8;">
+          No sales pitch. No commitment. Just an honest conversation about your OT environment and where the real risks
+          lie.</p>
+        <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">[ Start With a
+          Discovery Call ]</a>
+        <div
+          style="margin-top: 24px; color: var(--color-muted); font-family: var(--font-display); font-size: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap;">
+          <span><i class="ph ph-lock"></i> NDA-Protected</span>
+          <span><i class="ph ph-clock"></i> 24–48hr Response</span>
+          <span><i class="ph ph-shield-check"></i> No Juniors. No Outsourcing.</span>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -108,8 +400,10 @@
         <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
         <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
         <div style="display: flex; gap: 8px;">
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
+          <span class="badge badge-success"
+            style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
+          <span class="badge badge-success"
+            style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
         </div>
       </div>
       <div class="footer-col">
@@ -128,7 +422,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="threat-cases.html">Threat Cases</a></li>
-          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
@@ -151,4 +445,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -17,17 +19,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -40,9 +42,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -51,44 +55,43 @@
   </aside>
 
   <main>
-    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+    <section class="page-header"
+      style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
       <h1 class="section-title">Secure Communications</h1>
       <p class="section-subtitle">Typical response: 24–48 hours. All inquiries treated as highly confidential.</p>
       <!-- CALENDLY_WIDGET_EMBED_HERE -->
     </section>
 
     <section>
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; justify-content: center;">
-        
-        <div style="flex: 1 1 500px; background: var(--color-surface); padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--shadow-base);">
+      <div
+        style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; justify-content: center;">
+
+        <div
+          style="flex: 1 1 500px; background: var(--color-surface); padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--shadow-base);">
           <form id="contactForm" class="validate-form" action="https://formspree.io/f/REPLACE_ID" method="POST">
-            <div style="display: flex; gap: 16px; margin-bottom: 20px;">
-              <div class="form-group" style="margin-bottom: 0;">
-                <label class="form-label" for="name">Name *</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-              </div>
-              <div class="form-group" style="margin-bottom: 0;">
-                <label class="form-label" for="org">Organization *</label>
-                <input type="text" id="org" name="organization" class="form-control" required>
-              </div>
+            <div class="form-group">
+              <label class="form-label" for="name">Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="org">Organization *</label>
+              <input type="text" id="org" name="organization" class="form-control" required>
             </div>
 
-            <div style="display: flex; gap: 16px; margin-bottom: 20px;">
-              <div class="form-group" style="margin-bottom: 0;">
-                <label class="form-label" for="email">Corporate Email *</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-              </div>
-              <div class="form-group" style="margin-bottom: 0;">
-                <label class="form-label" for="industry">Industry *</label>
-                <select id="industry" name="industry" class="form-control" required>
-                  <option value="">Select...</option>
-                  <option value="energy">Energy</option>
-                  <option value="water">Water / Wastewater</option>
-                  <option value="manufacturing">Manufacturing</option>
-                  <option value="pharma">Pharma</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Corporate Email *</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="industry">Industry *</label>
+              <select id="industry" name="industry" class="form-control" required>
+                <option value="">Select...</option>
+                <option value="energy">Energy</option>
+                <option value="water">Water / Wastewater</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="pharma">Pharma</option>
+                <option value="other">Other</option>
+              </select>
             </div>
 
             <div class="form-group">
@@ -108,25 +111,63 @@
               <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 12px;">Submit Inquiry</button>
+            <button type="submit" class="btn btn-primary"
+              style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 12px;">Submit Inquiry</button>
           </form>
         </div>
 
         <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px;">
-          <div class="map-placeholder" aria-label="Location map" style="width: 100%; height: 250px; background-color: var(--color-surface); border: 1px solid var(--color-border); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);">
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.1;"></div>
-            <div style="font-family: var(--font-display); color: var(--color-muted); z-index: 1;">[ LOCATION: HOUSTON, TX ]</div>
+          <div style="background: var(--color-surface); padding: 32px; border-left: 3px solid var(--color-accent);">
+            <h3 class="mb-4" style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 2px;">
+              Contact Us</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <i class="ph ph-map-pin" style="color: var(--color-accent); font-size: 1.5rem;"></i>
+                <div>
+                  <div
+                    style="font-family: var(--font-display); font-size: 0.8rem; color: var(--color-muted); margin-bottom: 4px;">
+                    [ HEADQUARTERS ]</div>
+                  <p style="font-size: 0.95rem;">1201 Fannin St, Suite 400<br>Houston, TX 77002, USA</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <i class="ph ph-phone" style="color: var(--color-accent); font-size: 1.5rem;"></i>
+                <div>
+                  <div
+                    style="font-family: var(--font-display); font-size: 0.8rem; color: var(--color-muted); margin-bottom: 4px;">
+                    [ DIRECT LINE ]</div>
+                  <p style="font-size: 0.95rem;">+1 (713) 555-0198</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <i class="ph ph-share-network" style="color: var(--color-accent); font-size: 1.5rem;"></i>
+                <div>
+                  <div
+                    style="font-family: var(--font-display); font-size: 0.8rem; color: var(--color-muted); margin-bottom: 8px;">
+                    [ CONNECT ]</div>
+                  <div style="display: flex; gap: 16px;">
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"
+                        style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="social-link" aria-label="X"><i class="ph ph-x-logo"
+                        style="font-size: 1.5rem;"></i></a>
+                    <a href="#" class="social-link" aria-label="GitHub"><i class="ph ph-github-logo"
+                        style="font-size: 1.5rem;"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div style="background: var(--color-surface); padding: 24px; border-left: 3px solid var(--color-accent);">
-            <h3 class="mb-4" style="font-family: var(--font-display);">Encrypted Channel</h3>
-            <p style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 16px;">For sensitive communications involving vulnerability disclosures or active incident response, please encrypt using the public key below.</p>
-            <div style="background: #000; color: #0f0; padding: 16px; font-family: var(--font-display); font-size: 0.8rem; overflow-x: auto; border-radius: 2px;">
-              <!-- PGP_PUBLIC_KEY_BLOCK_HERE -->
-              -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
-              mQINBGEy7... [KEY PLACEHOLDER]<br>
-              -----END PGP PUBLIC KEY BLOCK-----
-            </div>
+          <div class="map-container"
+            style="width: 100%; height: 300px; border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); filter: grayscale(1) invert(1) sepia(1) hue-rotate(100deg) saturate(10) brightness(0.7) contrast(1.5); opacity: 0.9;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221509.34960305!2d-95.5448375!3d29.816041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1715420000000!5m2!1sen!2sin"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
@@ -143,4 +184,5 @@
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

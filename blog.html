@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,28 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
     }
-    @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 1024px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -26,17 +45,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html" class="active">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -49,9 +68,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html" class="active">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -60,66 +81,163 @@
   </aside>
 
   <main>
-    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+    <section class="page-header"
+      style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
       <h1 class="section-title">OT Security Intelligence</h1>
-      <p class="section-subtitle">Insights, methodology, and technical deep-dives into protecting industrial environments.</p>
+      <p class="section-subtitle">Insights, methodology, and technical deep-dives into protecting industrial
+        environments.</p>
     </section>
 
     <section id="blog-posts">
       <div class="blog-grid">
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-muted">Best Practices</span>
+
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog1.jpg" alt="Flat OT Networks"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">Why Flat OT Networks Are a Ticking Time Bomb</h3>
-          <p class="card-text mb-4">Examining the catastrophic risks of unsegmented Level 2 networks where a single compromised HMI provides direct access to all PLCs.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Best Practices</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">Why Flat OT Networks Are a Ticking Time Bomb</h3>
+            <p class="card-text mb-4" style="flex: 1;">Examining the catastrophic risks of unsegmented Level 2 networks
+              where a single compromised HMI provides direct access to all PLCs.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
 
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-muted">Compliance</span>
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog2.jpg" alt="IEC 62443 vs NIST 800-82"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">IEC 62443 vs NIST 800-82: Which Framework?</h3>
-          <p class="card-text mb-4">A comparative analysis of the leading ICS security frameworks and how to map their overlapping controls to streamline audits.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Compliance</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">IEC 62443 vs NIST 800-82: Which Framework?</h3>
+            <p class="card-text mb-4" style="flex: 1;">A comparative analysis of the leading ICS security frameworks and
+              how to map their overlapping controls to streamline audits.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
 
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-danger">Threat Intel</span>
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog3.jpg" alt="Ransomware Targeting ICS"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">The Evolution of Ransomware Targeting ICS</h3>
-          <p class="card-text mb-4">How modern ransomware groups are specifically writing payloads to identify and halt industrial processes like Siemens WinCC and GE Proficy.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Threat Intel</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">The Evolution of Ransomware Targeting ICS</h3>
+            <p class="card-text mb-4" style="flex: 1;">How modern ransomware groups are specifically writing payloads to
+              identify and halt industrial processes like Siemens WinCC and GE Proficy.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
 
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-muted">Industry News</span>
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog4.jpg" alt="NIS2 European Manufacturing"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">Impact of NIS2 on European Manufacturing</h3>
-          <p class="card-text mb-4">Understanding the mandatory incident reporting and executive liability provisions in the new EU directive affecting OT operators.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Industry News</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">Impact of NIS2 on European Manufacturing</h3>
+            <p class="card-text mb-4" style="flex: 1;">Understanding the mandatory incident reporting and executive
+              liability provisions in the new EU directive affecting OT operators.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
 
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-muted">Best Practices</span>
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog5.jpg" alt="Safe Active Scanning Legacy Environments"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">Safe Active Scanning in Legacy Environments</h3>
-          <p class="card-text mb-4">Why traditional IT vulnerability scanners crash legacy PLCs, and how to perform safe asset discovery using OT-native protocols.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Best Practices</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">Safe Active Scanning in Legacy Environments</h3>
+            <p class="card-text mb-4" style="flex: 1;">Why traditional IT vulnerability scanners crash legacy PLCs, and
+              how to perform safe asset discovery using OT-native protocols.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
 
-        <a href="blog-single.html" class="card" style="text-decoration: none; color: inherit;">
-          <div style="margin-bottom: 16px;">
-            <span class="badge badge-warning">Case Studies</span>
+        <a href="blog-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/blog6.jpg" alt="Remote Access Exploitation"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%); transition: filter 0.3s;">
           </div>
-          <h3 class="card-title">Post-Mortem: Remote Access Exploitation</h3>
-          <p class="card-text mb-4">Deconstructing a recent breach involving unauthorized vendor remote access tools bypassed the IDMZ entirely.</p>
-          <div style="color: var(--color-accent); font-family: var(--font-display);">Read Article →</div>
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <div style="margin-bottom: 16px;">
+              <span class="badge badge-accent">Case Studies</span>
+            </div>
+            <h3 class="card-title" style="margin-bottom: 12px;">Post-Mortem: Remote Access Exploitation</h3>
+            <p class="card-text mb-4" style="flex: 1;">Deconstructing a recent breach involving unauthorized vendor
+              remote access tools that bypassed the IDMZ entirely.</p>
+            <div class="read-more"
+              style="color: var(--color-accent); font-family: var(--font-display); margin-top: auto;">Read Article →
+            </div>
+          </div>
         </a>
+
+      </div>
+    </section>
+
+    <section id="faq" style="background-color: var(--color-surface); padding-top: 80px; padding-bottom: 80px;">
+      <div class="section-header">
+        <h2 class="section-title">Knowledge Base FAQ</h2>
+        <p class="section-subtitle">Common questions about our research and reporting methodology.</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; padding: 0 5%;">
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">How often is new threat intel published?</summary>
+            <div class="faq-answer">
+              <p>We aim to publish technical deep-dives monthly. However, urgent security advisories regarding zero-day exploits or active nation-state campaigns affecting OT assets are published immediately as verified data becomes available.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">Are these articles based on real-world incidents?</summary>
+            <div class="faq-answer">
+              <p>Yes. All **Case Study** and **Threat Intel** posts are synthesized from public disclosures, ICS-CERT advisories, and de-identified engagement findings. We ensure 100% client confidentiality by sanitizing all proprietary architectural details.</p>
+            </div>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary class="faq-question">Can I request a technical deep-dive on a specific PLC/SCADA system?</summary>
+            <div class="faq-answer">
+              <p>Absolutely. We prioritize research that provides the highest defensive value to the ICS community. If you have a specific protocol or vendor platform you'd like us to analyze, please submit a request via our **Contact** page.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -133,11 +251,15 @@
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <ul><li><a href="blog.html">Blog</a></li></ul>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <ul><li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li></ul>
+        <ul>
+          <li><a href="mailto:info@threatforge.com">info@threatforge.com</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -146,4 +268,5 @@
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

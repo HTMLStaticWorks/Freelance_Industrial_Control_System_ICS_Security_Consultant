@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ThreatForge | ICS & OT Cybersecurity Consultant</title>
-  <meta name="description" content="ThreatForge: Forging defenses for the machines that run the world. Expert OT network segmentation, patch management, and ICS risk assessments.">
+  <meta name="description"
+    content="ThreatForge: Forging defenses for the machines that run the world. Expert OT network segmentation, patch management, and ICS risk assessments.">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -19,6 +21,7 @@
   }
   </script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -27,17 +30,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -50,9 +53,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -61,35 +66,143 @@
   </aside>
 
   <main>
-    <section class="hero-section text-center" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
-      <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-image: linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1; z-index: -1;"></div>
-      <div class="status-dot mb-4">● SYSTEMS OPERATIONAL</div>
-      <h1 class="section-title">Securing Industrial Control Systems.<br><span class="typewriter-target" style="color: var(--color-accent); font-family: var(--font-display);"></span></h1>
-      <p class="section-subtitle mb-4">Forging defenses for the machines that run the world. OT Security. Forged. Not Patched.</p>
-      <div style="display: flex; gap: 16px; justify-content: center;">
-        <a href="contact.html" class="btn btn-primary">Request Assessment</a>
-        <a href="threat-cases.html" class="btn btn-outline">View Case Studies</a>
-      </div>
-      
-      <div class="purdue-svg-container mt-4" style="max-width: 600px; width: 100%; margin: 48px auto 0;">
-        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="10" width="380" height="30" fill="var(--color-surface)" stroke="var(--color-accent)" stroke-width="2"/>
-          <text x="200" y="30" fill="var(--color-text)" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 4: ENTERPRISE ZONE</text>
-          
-          <rect x="30" y="50" width="340" height="30" fill="var(--color-surface)" stroke="var(--color-warning)" stroke-width="2"/>
-          <text x="200" y="70" fill="var(--color-text)" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 3.5: IDMZ</text>
+    <section class="hero-section text-center"
+      style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
 
-          <rect x="50" y="90" width="300" height="30" fill="var(--color-surface)" stroke="var(--color-accent)" stroke-width="2"/>
-          <text x="200" y="110" fill="var(--color-text)" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 3: MANUFACTURING OPS</text>
-          
-          <rect x="70" y="130" width="260" height="30" fill="var(--color-surface)" stroke="var(--color-accent)" stroke-width="2"/>
-          <text x="200" y="150" fill="var(--color-text)" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 2: SUPERVISORY (SCADA/HMI)</text>
-
-          <rect x="90" y="170" width="220" height="30" fill="var(--color-surface)" stroke="var(--color-danger)" stroke-width="2"/>
-          <text x="200" y="190" fill="var(--color-text)" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 1 & 0: BASIC CONTROL (PLC)</text>
-        </svg>
+      <!-- Blurred background image -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&h=900&q=80"
+          alt="Industrial control system background"
+          style="width: 100%; height: 100%; object-fit: cover; display: block; filter: blur(6px) grayscale(40%) brightness(0.45); transform: scale(1.05);">
       </div>
+
+      <!-- Light mode overlay — semi-white to soften for light theme -->
+      <div class="hero-light-overlay"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(255,255,255,0.15);">
+      </div>
+
+      <!-- Dark mode overlay — deeper dark to deepen for dark theme -->
+      <div class="hero-dark-overlay"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0,0,0,0.35);">
+      </div>
+
+      <!-- Grid overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
+    background-image: linear-gradient(var(--color-border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 40px 40px; opacity: 0.08;"></div>
+
+      <!-- Content -->
+      <div style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center;">
+
+        <div class="status-dot mb-4" style="color: var(--color-accent); border-color: var(--color-accent);">● SYSTEMS
+          OPERATIONAL</div>
+
+        <h1 class="section-title hero-heading" style="text-shadow: 0 2px 12px rgba(0,0,0,0.5);">
+          Securing Industrial Control Systems.<br>
+          <span class="typewriter-target" style="color: var(--color-accent); font-family: var(--font-display);"></span>
+        </h1>
+
+        <p class="section-subtitle mb-4 hero-subtitle" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">
+          Forging defenses for the machines that run the world. OT Security. Forged. Not Patched.
+        </p>
+
+        <div style="display: flex; gap: 16px; justify-content: center;">
+          <a href="contact.html" class="btn btn-primary">Request Assessment</a>
+          <a href="threat-cases.html" class="btn btn-outline hero-outline-btn">View Case Studies</a>
+        </div>
+
+        <div class="purdue-svg-container mt-4" style="max-width: 600px; width: 100%; margin: 48px auto 0;">
+          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="380" height="30" fill="rgba(0,0,0,0.5)" stroke="var(--color-accent)"
+              stroke-width="2" />
+            <text x="200" y="30" fill="#ffffff" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 4:
+              ENTERPRISE ZONE</text>
+
+            <rect x="30" y="50" width="340" height="30" fill="rgba(0,0,0,0.5)" stroke="var(--color-warning)"
+              stroke-width="2" />
+            <text x="200" y="70" fill="#ffffff" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 3.5:
+              IDMZ</text>
+
+            <rect x="50" y="90" width="300" height="30" fill="rgba(0,0,0,0.5)" stroke="var(--color-accent)"
+              stroke-width="2" />
+            <text x="200" y="110" fill="#ffffff" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 3:
+              MANUFACTURING OPS</text>
+
+            <rect x="70" y="130" width="260" height="30" fill="rgba(0,0,0,0.5)" stroke="var(--color-accent)"
+              stroke-width="2" />
+            <text x="200" y="150" fill="#ffffff" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 2:
+              SUPERVISORY (SCADA/HMI)</text>
+
+            <rect x="90" y="170" width="220" height="30" fill="rgba(0,0,0,0.5)" stroke="var(--color-danger)"
+              stroke-width="2" />
+            <text x="200" y="190" fill="#ffffff" text-anchor="middle" font-family="monospace" font-size="12">LEVEL 1:
+              BASIC CONTROL (PLC)</text>
+          </svg>
+        </div>
+      </div>
+
     </section>
+
+    <style>
+      /* Light mode — darker text for contrast against lighter overlay */
+      .hero-heading {
+        color: #0a0a0a;
+        text-shadow: 0 2px 12px rgba(255, 255, 255, 0.3);
+      }
+
+      .hero-subtitle {
+        color: #1a1a1a;
+        text-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-outline-btn {
+        border-color: rgba(0, 0, 0, 0.5);
+        color: #0a0a0a;
+      }
+
+      .hero-light-overlay {
+        display: block;
+      }
+
+      .hero-dark-overlay {
+        display: none;
+      }
+
+      /* Dark mode — bright white text for contrast against deeper dark overlay */
+      [data-theme="dark"] .hero-heading,
+      .dark .hero-heading,
+      body.dark-mode .hero-heading {
+        color: #ffffff;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
+      }
+
+      [data-theme="dark"] .hero-subtitle,
+      .dark .hero-subtitle,
+      body.dark-mode .hero-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+      }
+
+      [data-theme="dark"] .hero-outline-btn,
+      .dark .hero-outline-btn,
+      body.dark-mode .hero-outline-btn {
+        border-color: rgba(255, 255, 255, 0.45);
+        color: #ffffff;
+      }
+
+      [data-theme="dark"] .hero-light-overlay,
+      .dark .hero-light-overlay,
+      body.dark-mode .hero-light-overlay {
+        display: none;
+      }
+
+      [data-theme="dark"] .hero-dark-overlay,
+      .dark .hero-dark-overlay,
+      body.dark-mode .hero-dark-overlay {
+        display: block;
+      }
+    </style>
 
     <section id="services">
       <div class="section-header">
@@ -97,36 +210,68 @@
         <p class="section-subtitle">Comprehensive lifecycle defense for OT/ICS environments.</p>
       </div>
       <div class="card-grid">
-        <div class="card">
-          <i class="ph ph-shield-warning card-icon"></i>
-          <h3 class="card-title">ICS Risk Assessment</h3>
-          <p class="card-text">Purdue-level asset inventory and vulnerability mapping.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=480&q=80"
+            alt="Circuit board ICS risk" style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-shield-warning card-icon"></i>
+            <h3 class="card-title">ICS Risk Assessment</h3>
+            <p class="card-text">Purdue-level asset inventory and vulnerability mapping.</p>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-git-branch card-icon"></i>
-          <h3 class="card-title">OT Network Segmentation</h3>
-          <p class="card-text">DMZ design, IDMZ, zone/conduit per IEC 62443.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=480&q=80"
+            alt="Server room network segmentation"
+            style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-git-branch card-icon"></i>
+            <h3 class="card-title">OT Network Segmentation</h3>
+            <p class="card-text">DMZ design, IDMZ, zone/conduit per IEC 62443.</p>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-wrench card-icon"></i>
-          <h3 class="card-title">Patch Management</h3>
-          <p class="card-text">Vendor-coordinated patching for Siemens, Rockwell, Honeywell.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/patch.jpg" alt="Engineer terminal patch management"
+            style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-wrench card-icon"></i>
+            <h3 class="card-title">Patch Management</h3>
+            <p class="card-text">Vendor-coordinated patching for Siemens, Rockwell, Honeywell.</p>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-siren card-icon"></i>
-          <h3 class="card-title">Incident Response</h3>
-          <p class="card-text">OT-specific IR playbooks, forensics, recovery.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/incident.jpg" alt="Control room monitors incident response"
+            style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-siren card-icon"></i>
+            <h3 class="card-title">Incident Response</h3>
+            <p class="card-text">OT-specific IR playbooks, forensics, recovery.</p>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-clipboard-text card-icon"></i>
-          <h3 class="card-title">Compliance Auditing</h3>
-          <p class="card-text">IEC 62443, NIST SP 800-82 rev3, NIS2, NERC CIP.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/complaince.jpg" alt="Audit checklist compliance"
+            style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-clipboard-text card-icon"></i>
+            <h3 class="card-title">Compliance Auditing</h3>
+            <p class="card-text">IEC 62443, NIST SP 800-82 rev3, NIS2, NERC CIP.</p>
+          </div>
         </div>
-        <div class="card">
-          <i class="ph ph-bug card-icon"></i>
-          <h3 class="card-title">OT Penetration Testing</h3>
-          <p class="card-text">Safe red teaming without disrupting live processes.</p>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/pen.jpg" alt="Network cables OT pen testing"
+            style="width:100%; height:180px; object-fit:cover; filter:grayscale(40%);">
+          <div style="padding: 32px;">
+            <i class="ph ph-bug card-icon"></i>
+            <h3 class="card-title">OT Penetration Testing</h3>
+            <p class="card-text">Safe red teaming without disrupting live processes.</p>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -135,7 +280,8 @@
         <h2 class="section-title">Purdue Model Expertise</h2>
         <p class="section-subtitle">Defense-in-depth across every layer of the architecture.</p>
       </div>
-      <div class="purdue-interactive" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+      <div class="purdue-interactive"
+        style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
         <div class="card" style="align-items: center; text-align: center; cursor: crosshair;">
           <h3 class="card-title">Level 4: Enterprise Zone</h3>
           <p class="card-text">Business logistics systems. IT/OT Convergence point.</p>
@@ -159,12 +305,74 @@
       </div>
     </section>
 
+
+    <section id="about-split" class="about-split">
+      <div class="split-container">
+
+        <!-- LEFT: Image Side -->
+        <div class="split-image">
+          <img src="assets/images/otconsultant.jpg" alt="ICS cybersecurity consultant at work"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: grayscale(40%);">
+          <div class="image-accent-line">
+          </div>
+          <div class="image-badge">
+            <div class="badge-label">
+              ● CERTIFIED SPECIALIST</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="badge badge-success">GICSP</span>
+              <span class="badge badge-success">CISSP</span>
+              <span class="badge badge-success">IEC 62443</span>
+              <span class="badge badge-success">CSSA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Text Side -->
+        <div class="split-text">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 16px;">
+            [ WHO WE ARE ]</div>
+          <h2 class="section-title" style="text-align: center; margin-bottom: 24px;">15+ Years Securing Critical
+            Infrastructure</h2>
+          <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 24px;">Started on the factory floor
+            programming PLCs before moving into network defense. Formerly a Lead ICS Architect at a major utility and
+            defense contractor — now an independent consultant delivering precision OT security to the world's most
+            critical operations.</p>
+          <p style="color: var(--color-muted); line-height: 1.8; margin-bottom: 32px;">Every engagement is led
+            personally, with a methodology built around <strong style="color: var(--color-text);">Assess → Segment →
+              Monitor → Harden → Report</strong> — no juniors, no outsourcing.</p>
+
+          <!-- Stats row -->
+          <div style="display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center;">
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">120+</div>
+              <div style="color: var(--color-muted); font-size: 0.85rem;">Engagements Delivered</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">0</div>
+              <div style="color: var(--color-muted); font-size: 0.85rem;">Unplanned Downtimes</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">15+</div>
+              <div style="color: var(--color-muted); font-size: 0.85rem;">Years in OT Security</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <a href="about.html" class="btn btn-primary">Meet Consultant</a>
+            <a href="contact.html" class="btn btn-outline">Start Engagement</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="stats">
       <div class="section-header">
         <h2 class="section-title">Threat Statistics</h2>
         <p class="section-subtitle">The rising cost of unprotected operations.</p>
       </div>
-      <div class="card-grid">
+      <div class="stats-grid">
         <div class="card text-center" style="align-items: center;">
           <h3 class="display-font" style="font-size: 3rem; color: var(--color-accent);">247%</h3>
           <p class="card-text">Rise in OT attacks (2022–2024)</p>
@@ -186,29 +394,59 @@
         <p class="section-subtitle">Trusted by critical infrastructure leaders.</p>
       </div>
       <div class="card-grid">
-        <div class="card">
-          <i class="ph ph-quotes card-icon" style="opacity: 0.5;"></i>
-          <p class="card-text">"ThreatForge identified exposed Rockwell PLCs that our previous IT auditors completely missed. Their understanding of Level 1 constraints is unmatched."</p>
-          <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%;">
-            <strong class="display-font">Senior OT Engineer</strong>
-            <div style="color: var(--color-muted); font-size: 0.8rem;">Tier 1 Chemical Plant</div>
+
+        <div class="card" style="padding: 0; overflow: hidden; text-align: center;">
+          <div style="position: relative; height: 260px; overflow: hidden;">
+            <img src="assets/images/ot.jpg" alt="Senior OT Engineer"
+              style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block; filter:grayscale(30%);">
+            <div
+              style="position:absolute; bottom:0; left:0; width:100%; height:55%; background: linear-gradient(to top, var(--color-surface), transparent);">
+            </div>
+            <div
+              style="position:absolute; top:16px; left:16px; background:#00CC7A; color:#000; font-size:1.2rem; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:2px; font-weight:700;">
+              ❝</div>
+          </div>
+          <div style="padding: 0 32px 32px; display:flex; flex-direction:column; align-items:center;">
+            <p class="card-text" style="font-style:italic; margin-bottom:20px;">"ThreatForge identified exposed Rockwell
+              PLCs that our previous IT auditors completely missed. Their understanding of Level 1 constraints is
+              unmatched."</p>
+            <div style="width:40px; border-top:2px solid var(--color-accent); margin-bottom:16px;"></div>
+            <strong class="display-font" style="text-transform:uppercase; letter-spacing:1px;">Senior OT
+              Engineer</strong>
+            <div style="color: var(--color-accent); font-size: 0.8rem; margin-top:4px;">Tier 1 Chemical Plant</div>
           </div>
         </div>
-        <div class="card">
-          <i class="ph ph-quotes card-icon" style="opacity: 0.5;"></i>
-          <p class="card-text">"The IEC 62443 gap assessment provided a clear, actionable roadmap. The IDMZ deployment was executed without a single minute of unplanned downtime."</p>
-          <div class="mt-4" style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%;">
-            <strong class="display-font">Plant Manager</strong>
-            <div style="color: var(--color-muted); font-size: 0.8rem;">Midwest Automotive Manufacturer</div>
+
+        <div class="card" style="padding: 0; overflow: hidden; text-align: center;">
+          <div style="position: relative; height: 260px; overflow: hidden;">
+            <img src="assets/images/ot1.jpg" alt="Plant Manager"
+              style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block; filter:grayscale(30%);">
+            <div
+              style="position:absolute; bottom:0; left:0; width:100%; height:55%; background: linear-gradient(to top, var(--color-surface), transparent);">
+            </div>
+            <div
+              style="position:absolute; top:16px; left:16px; background:#00CC7A; color:#000; font-size:1.2rem; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:2px; font-weight:700;">
+              ❝</div>
+          </div>
+          <div style="padding: 0 32px 32px; display:flex; flex-direction:column; align-items:center;">
+            <p class="card-text" style="font-style:italic; margin-bottom:20px;">"The IEC 62443 gap assessment provided a
+              clear, actionable roadmap. The IDMZ deployment was executed without a single minute of unplanned.
+              "</p>
+            <div style="width:40px; border-top:2px solid var(--color-accent); margin-bottom:16px;"></div>
+            <strong class="display-font" style="text-transform:uppercase; letter-spacing:1px;">Plant Manager</strong>
+            <div style="color: var(--color-accent); font-size: 0.8rem; margin-top:4px;">Midwest Automotive Manufacturer
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <section id="cta" class="text-center">
       <h2 class="section-title">Is your OT network exposed?</h2>
       <p class="section-subtitle mb-4">Schedule a confidential discovery call to evaluate your ICS security posture.</p>
-      <a href="contact.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 16px 32px;">[ Book a Free Discovery Call ]</a>
+      <a href="contact.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 16px 32px;">[ Book a Free
+        Discovery Call ]</a>
     </section>
   </main>
 
@@ -219,8 +457,8 @@
         <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
         <p style="margin: 16px 0; color: var(--color-muted);">Forging defenses for the machines that run the world.</p>
         <div style="display: flex; gap: 8px;">
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">GICSP</span>
-          <span class="badge badge-success" style="background-color: rgba(0, 204, 122, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 2px;">CISSP</span>
+          <span class="badge badge-success">GICSP</span>
+          <span class="badge badge-success">CISSP</span>
         </div>
       </div>
       <div class="footer-col">
@@ -239,7 +477,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="threat-cases.html">Threat Cases</a></li>
-          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
@@ -262,4 +500,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

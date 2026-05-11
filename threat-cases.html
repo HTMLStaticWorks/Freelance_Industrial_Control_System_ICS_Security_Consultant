@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -17,17 +19,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html" class="active">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -40,9 +42,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html" class="active">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -51,7 +55,8 @@
   </aside>
 
   <main>
-    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+    <section class="page-header"
+      style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
       <h1 class="section-title">ICS Threat Cases</h1>
       <p class="section-subtitle">Real-world incidents and the architectural failures that allowed them.</p>
       <div class="mt-4" style="color: var(--color-warning); font-family: var(--font-display); font-size: 0.9rem;">
@@ -71,57 +76,199 @@
 
     <section id="cases">
       <div class="card-grid">
-        <a href="threat-case-single.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-          <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 16px;">
-            <span class="badge badge-danger">Energy</span>
-            <span class="badge badge-muted">Purdue Level 1</span>
+
+        <!-- Card 1 -->
+        <a href="threat-case-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/threat1.jpg" alt="TRITON TRISIS Safety System"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div
+              style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between;">
+              <span class="badge badge-accent">Energy</span>
+              <span class="badge badge-accent">Purdue Level 1</span>
+            </div>
           </div>
-          <h3 class="card-title">TRITON / TRISIS Safety System Compromise</h3>
-          <p class="card-text mb-4"><strong>Attack Vector:</strong> Malicious workstation compromise leading to reprogramming of Triconex Safety Instrumented Systems (SIS).</p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem;">
-            <span style="color: var(--color-accent);">Outcome:</span> Plant shutdown.<br>
-            <span style="color: var(--color-warning);">Lesson:</span> Segment SIS networks completely from DCS.
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <h3 class="card-title" style="margin-bottom: 12px;">TRITON / TRISIS Safety System Compromise</h3>
+            <p class="card-text mb-4"><strong>Attack Vector:</strong> Malicious workstation compromise leading to
+              reprogramming of Triconex Safety Instrumented Systems (SIS).</p>
+            <div
+              style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem; flex: 1;">
+              <span style="color: var(--color-accent);">Outcome:</span> Plant shutdown.<br>
+              <span style="color: var(--color-warning);">Lesson:</span> Segment SIS networks completely from DCS.
+            </div>
+            <div style="margin-top: 20px;">
+              <span class="btn btn-outline" style="width: 100%; justify-content: center;">[ View Full Case Study
+                ]</span>
+            </div>
           </div>
         </a>
 
-        <a href="threat-case-single.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-          <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 16px;">
-            <span class="badge badge-warning">Energy</span>
-            <span class="badge badge-muted">Purdue Level 2 & 3</span>
+        <!-- Card 2 -->
+        <a href="threat-case-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/threat2.jpg" alt="Ukraine Grid Attack CRASHOVERRIDE"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div
+              style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between;">
+              <span class="badge badge-accent">Energy</span>
+              <span class="badge badge-accent">Purdue Level 2 & 3</span>
+            </div>
           </div>
-          <h3 class="card-title">Ukraine Grid Attack (CRASHOVERRIDE)</h3>
-          <p class="card-text mb-4"><strong>Attack Vector:</strong> Spearphishing IT network, credential harvesting, remote access via VPN into OT SCADA systems.</p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem;">
-            <span style="color: var(--color-accent);">Outcome:</span> Mass power outage.<br>
-            <span style="color: var(--color-warning);">Lesson:</span> MFA on all external remote access to OT.
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Ukraine Grid Attack (CRASHOVERRIDE)</h3>
+            <p class="card-text mb-4"><strong>Attack Vector:</strong> Spearphishing IT network, credential harvesting,
+              remote access via VPN into OT SCADA systems.</p>
+            <div
+              style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem; flex: 1;">
+              <span style="color: var(--color-accent);">Outcome:</span> Mass power outage.<br>
+              <span style="color: var(--color-warning);">Lesson:</span> MFA on all external remote access to OT.
+            </div>
+            <div style="margin-top: 20px;">
+              <span class="btn btn-outline" style="width: 100%; justify-content: center;">[ View Full Case Study
+                ]</span>
+            </div>
           </div>
         </a>
 
-        <a href="threat-case-single.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-          <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 16px;">
-            <span class="badge badge-muted" style="background: rgba(0, 150, 255, 0.1); color: #0096ff;">Water</span>
-            <span class="badge badge-muted">Purdue Level 2</span>
+        <!-- Card 3 -->
+        <a href="threat-case-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/threat3.jpg" alt="Oldsmar Water Plant Breach"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div
+              style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between;">
+              <span class="badge badge-accent">Water</span>
+              <span class="badge badge-accent">Purdue Level 2</span>
+            </div>
           </div>
-          <h3 class="card-title">Oldsmar Water Plant Breach</h3>
-          <p class="card-text mb-4"><strong>Attack Vector:</strong> Exploitation of dormant TeamViewer installation with shared passwords on an HMI operator workstation.</p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem;">
-            <span style="color: var(--color-accent);">Outcome:</span> Chemical dosage altered (thwarted manually).<br>
-            <span style="color: var(--color-warning);">Lesson:</span> Remove unauthorized remote access tools.
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Oldsmar Water Plant Breach</h3>
+            <p class="card-text mb-4"><strong>Attack Vector:</strong> Exploitation of dormant TeamViewer installation
+              with shared passwords on an HMI operator workstation.</p>
+            <div
+              style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem; flex: 1;">
+              <span style="color: var(--color-accent);">Outcome:</span> Chemical dosage altered (thwarted manually).<br>
+              <span style="color: var(--color-warning);">Lesson:</span> Remove unauthorized remote access tools.
+            </div>
+            <div style="margin-top: 20px;">
+              <span class="btn btn-outline" style="width: 100%; justify-content: center;">[ View Full Case Study
+                ]</span>
+            </div>
           </div>
         </a>
 
-        <a href="threat-case-single.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-          <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 16px;">
-            <span class="badge badge-warning">Energy</span>
-            <span class="badge badge-muted">Purdue Level 4</span>
+        <!-- Card 4 -->
+        <a href="threat-case-single.html" class="card"
+          style="text-decoration: none; color: inherit; display: flex; flex-direction: column; padding: 0; overflow: hidden;">
+          <div style="position: relative; height: 200px; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/threat4.jpg" alt="Colonial Pipeline Ransomware"
+              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(20%);">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 70%, var(--color-surface) 100%);">
+            </div>
+            <div
+              style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between;">
+              <span class="badge badge-accent">Energy</span>
+              <span class="badge badge-accent">Purdue Level 4</span>
+            </div>
           </div>
-          <h3 class="card-title">Colonial Pipeline Ransomware</h3>
-          <p class="card-text mb-4"><strong>Attack Vector:</strong> Compromised legacy VPN profile with single-factor authentication leading to IT billing system lockdown.</p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem;">
-            <span style="color: var(--color-accent);">Outcome:</span> Precautionary shutdown of OT pipeline.<br>
-            <span style="color: var(--color-warning);">Lesson:</span> IT/OT interdependencies require resilient IDMZ.
+          <div style="padding: 24px 28px 28px; display: flex; flex-direction: column; flex: 1;">
+            <h3 class="card-title" style="margin-bottom: 12px;">Colonial Pipeline Ransomware</h3>
+            <p class="card-text mb-4"><strong>Attack Vector:</strong> Compromised legacy VPN profile with single-factor
+              authentication leading to IT billing system lockdown.</p>
+            <div
+              style="border-top: 1px solid var(--color-border); padding-top: 16px; width: 100%; font-size: 0.9rem; flex: 1;">
+              <span style="color: var(--color-accent);">Outcome:</span> Precautionary shutdown of OT pipeline.<br>
+              <span style="color: var(--color-warning);">Lesson:</span> IT/OT interdependencies require resilient IDMZ.
+            </div>
+            <div style="margin-top: 20px;">
+              <span class="btn btn-outline" style="width: 100%; justify-content: center;">[ View Full Case Study
+                ]</span>
+            </div>
           </div>
         </a>
+
+      </div>
+    </section>
+
+    <!-- START: Self-Assessment Block -->
+    <section id="self-assessment" style="background-color: var(--color-surface);">
+      <div class="section-header">
+        <h2 class="section-title">OT Security Readiness Self-Assessment</h2>
+        <p class="section-subtitle">Evaluate your baseline OT security posture.</p>
+      </div>
+      <div
+        style="max-width: 600px; margin: 0 auto; background: var(--color-bg); padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--shadow-base);">
+        <form id="complianceForm" class="validate-form">
+          <div class="form-group">
+            <label class="form-label">1. Do you have a complete, actively updated inventory of all Level 1/2 OT
+              assets?</label>
+            <select class="form-control" required>
+              <option value="">Select option...</option>
+              <option value="20">Yes, automated discovery</option>
+              <option value="10">Partial, manual spreadsheets</option>
+              <option value="0">No clear inventory</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">2. Is your OT network isolated from the IT network via an Industrial DMZ
+              (IDMZ)?</label>
+            <select class="form-control" required>
+              <option value="">Select option...</option>
+              <option value="20">Yes, strict IDMZ proxy</option>
+              <option value="10">Basic firewall (some routing allowed)</option>
+              <option value="0">Flat or loosely segmented</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">3. Are remote access sessions to OT systems secured with MFA?</label>
+            <select class="form-control" required>
+              <option value="">Select option...</option>
+              <option value="20">Yes, universally enforced</option>
+              <option value="10">Some, depending on vendor</option>
+              <option value="0">No MFA required</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">4. Do you have an OT-specific Incident Response plan?</label>
+            <select class="form-control" required>
+              <option value="">Select option...</option>
+              <option value="20">Yes, tested annually</option>
+              <option value="10">Drafted, but untested</option>
+              <option value="0">Rely on IT IR plan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">5. Is OT patching coordinated and tested before deployment?</label>
+            <select class="form-control" required>
+              <option value="">Select option...</option>
+              <option value="20">Yes, dedicated testbed</option>
+              <option value="10">Ad-hoc during outages</option>
+              <option value="0">Rarely/never patched</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" id="calcScore"
+            style="width: 100%; justify-content: center;">Calculate Readiness Score</button>
+
+          <div id="scoreResult" class="mt-4 text-center"
+            style="display: none; padding: 20px; border: 1px solid var(--color-border); font-family: var(--font-display);">
+            <h3 style="color: var(--color-accent); font-size: 2rem;" id="finalScore">0 / 100</h3>
+            <p id="scoreText"></p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -145,7 +292,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="threat-cases.html">Threat Cases</a></li>
-          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -164,4 +311,5 @@
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

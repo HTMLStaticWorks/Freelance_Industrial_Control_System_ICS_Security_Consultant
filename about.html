@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <header class="navbar">
     <a href="index.html" class="navbar-logo">[ThreatForge]<span class="cursor">_</span></a>
@@ -17,17 +19,17 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html" class="active">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html" class="desktop-only">Dashboard</a>
     </nav>
     <div class="nav-actions">
       <div class="desktop-toggles">
         <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
       </div>
-      <a href="dashboard.html" class="status-dot"><i class="ph ph-shield-check"></i> Dashboard</a>
-      <a href="login.html" class="btn-login">LOGIN</a>
+      <a href="login.html" class="btn-login desktop-only">LOGIN</a>
       <button class="hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button>
     </div>
   </header>
@@ -40,9 +42,11 @@
       <a href="home2.html">Home 2</a>
       <a href="services.html">Services</a>
       <a href="threat-cases.html">Threat Cases</a>
-      <a href="compliance.html">Compliance</a>
+      <a href="about.html" class="active">About</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
     </nav>
     <div class="mobile-toggles">
       <button class="icon-btn theme-toggle" aria-label="Toggle theme"></button>
@@ -51,7 +55,8 @@
   </aside>
 
   <main>
-    <section class="page-header" style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
+    <section class="page-header"
+      style="background-color: var(--color-surface); padding-top: 120px; padding-bottom: 80px; text-align: center;">
       <h1 class="section-title">The Consultant</h1>
       <p class="section-subtitle">Bridging the gap between physical engineering and cybersecurity.</p>
     </section>
@@ -59,19 +64,125 @@
     <section>
       <div class="zigzag-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
         <div style="flex: 1 1 400px;">
-          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="Consultant in server room" style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); filter: grayscale(50%);">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
+            alt="Consultant in server room"
+            style="border: 1px solid var(--color-border); clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%); filter: grayscale(50%);">
         </div>
-        <div style="flex: 1 1 400px;">
-          <h2 class="section-title text-left">15+ Years in OT Security</h2>
-          <p class="mb-4 text-left">I started my career programming PLCs on the factory floor before transitioning to network defense. Formerly a Lead ICS Architect at a Major Utility and Defense Contractor, I have spent over a decade securing critical infrastructure against advanced persistent threats.</p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+        <div style="flex: 1 1 400px; text-align: center;">
+          <h2 class="section-title">15+ Years in OT Security</h2>
+          <p class="mb-4">I started my career programming PLCs on the factory floor before transitioning to
+            network defense. Formerly a Lead ICS Architect at a Major Utility and Defense Contractor, I have spent over
+            a decade securing critical infrastructure against advanced persistent threats.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; justify-content: center;">
             <span class="badge badge-success">GICSP</span>
             <span class="badge badge-success">CSSA</span>
             <span class="badge badge-success">ISA/IEC 62443 Certificate</span>
             <span class="badge badge-success">CISSP</span>
           </div>
-          <p class="text-left"><strong>Methodology:</strong> Assess → Segment → Monitor → Harden → Report</p>
+          <p><strong>Methodology:</strong> Assess → Segment → Monitor → Harden → Report</p>
         </div>
+      </div>
+    </section>
+
+    <section id="timeline" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="section-header">
+        <h2 class="section-title">Career Milestones</h2>
+        <p class="section-subtitle">A decade of defending the physical layer.</p>
+      </div>
+      <div class="timeline-container">
+        
+        <div class="timeline-point">
+          <div class="timeline-date">[ 2023 ]</div>
+          <div class="timeline-content">
+            <h4 class="timeline-heading">Launched ThreatForge</h4>
+            <p class="timeline-text">Established independent consultancy specializing in high-consequence ICS environments and critical infrastructure protection.</p>
+          </div>
+        </div>
+
+        <div class="timeline-point">
+          <div class="timeline-date">[ 2018 ]</div>
+          <div class="timeline-content">
+            <h4 class="timeline-heading">Lead ICS Architect</h4>
+            <p class="timeline-text">Headed the OT security architecture for a major defense contractor, implementing IEC 62443 standards across multiple manufacturing sites.</p>
+          </div>
+        </div>
+
+        <div class="timeline-point">
+          <div class="timeline-date">[ 2014 ]</div>
+          <div class="timeline-content">
+            <h4 class="timeline-heading">Incident Responder</h4>
+            <p class="timeline-text">Handled complex forensic investigations into nation-state intrusions targeting energy sector telemetry and SCADA systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline-point">
+          <div class="timeline-date">[ 2009 ]</div>
+          <div class="timeline-content">
+            <h4 class="timeline-heading">SCADA Systems Engineer</h4>
+            <p class="timeline-text">Started on the engineering side, managing PLC programming and HMI development for large-scale utility operations.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="consultant-profile" style="padding: 0; overflow: hidden;">
+      <div style="display: flex; flex-wrap: wrap; min-height: 600px;">
+
+        <!-- LEFT: Clean Portrait Image -->
+        <div style="flex: 1 1 45%; min-height: 500px; overflow: hidden;">
+          <img src="assets/images/james.jpg" alt="ThreatForge Lead Consultant"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: grayscale(20%);">
+        </div>
+
+        <!-- RIGHT: Bio & Credentials -->
+        <div
+          style="flex: 1 1 45%; background-color: var(--color-surface); padding: 80px 5%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-left: 3px solid var(--color-accent);">
+          <div
+            style="font-family: var(--font-display); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 16px;">
+            [ LEAD CONSULTANT ]</div>
+          <h2 class="section-title" style="text-align: center; margin-bottom: 6px;">James Harrington</h2>
+          <div
+            style="font-family: var(--font-display); color: var(--color-muted); font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 32px;">
+            ICS / OT Cybersecurity Specialist</div>
+
+          <p style="line-height: 1.9; margin-bottom: 20px; max-width: 440px;">Started on the
+            factory floor programming Siemens S7 PLCs before transitioning into network defense. Formerly Lead ICS
+            Architect at a major utility and tier-1 defense contractor.</p>
+          <p style="line-height: 1.9; margin-bottom: 36px; max-width: 440px;">Every
+            engagement is personally led — no juniors, no outsourcing. The same hands that scoped your assessment
+            deliver the final report.</p>
+
+          <!-- Cert badges -->
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px;">
+            <span class="badge badge-success">GICSP</span>
+            <span class="badge badge-success">CISSP</span>
+            <span class="badge badge-success">IEC 62443</span>
+            <span class="badge badge-success">CSSA</span>
+            <span class="badge badge-success">NERC CIP</span>
+          </div>
+
+          <!-- Stats -->
+          <div style="display: flex; gap: 40px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">15+</div>
+              <div style="color: var(--color-muted); font-size: 0.8rem;">Years Experience</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">120+</div>
+              <div style="color: var(--color-muted); font-size: 0.8rem;">Engagements</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 2rem; color: var(--color-accent);">0</div>
+              <div style="color: var(--color-muted); font-size: 0.8rem;">Unplanned Downtimes</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">[ Start an Engagement ]</a>
+        </div>
+
       </div>
     </section>
 
@@ -79,33 +190,14 @@
       <div class="section-header">
         <h2 class="section-title">Technical Toolkit</h2>
       </div>
-      <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-family: var(--font-display); font-size: 1.2rem;">
+      <div
+        style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-family: var(--font-display); font-size: 1.2rem;">
         <span class="badge badge-muted">Nessus (Tenable.OT)</span>
         <span class="badge badge-muted">Claroty</span>
         <span class="badge badge-muted">Dragos</span>
         <span class="badge badge-muted">Wireshark</span>
         <span class="badge badge-muted">Shodan</span>
         <span class="badge badge-muted">ICS-CERT</span>
-      </div>
-    </section>
-
-    <section id="timeline">
-      <div class="section-header">
-        <h2 class="section-title">Career Milestones</h2>
-      </div>
-      <div class="timeline" style="max-width: 600px; margin: 0 auto; font-family: var(--font-display);">
-        <div class="timeline-item">
-          <strong>[2023]</strong> Launched ThreatForge independent consulting practice.
-        </div>
-        <div class="timeline-item">
-          <strong>[2018]</strong> Lead ICS Security Architect for a major defense contractor.
-        </div>
-        <div class="timeline-item">
-          <strong>[2014]</strong> ICS Incident Responder — handled multiple nation-state intrusions.
-        </div>
-        <div class="timeline-item">
-          <strong>[2009]</strong> Joined energy sector as a SCADA Systems Engineer.
-        </div>
       </div>
     </section>
   </main>
@@ -131,7 +223,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="threat-cases.html">Threat Cases</a></li>
-          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -151,4 +243,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
